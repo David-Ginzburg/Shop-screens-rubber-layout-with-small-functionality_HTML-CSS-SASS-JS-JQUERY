@@ -97,6 +97,10 @@
   min-height: 30px;
 }
 
+.title_delivery {
+  margin-top: 20px;
+}
+
 .checkbox {
   position: relative;
   flex-shrink: 0;

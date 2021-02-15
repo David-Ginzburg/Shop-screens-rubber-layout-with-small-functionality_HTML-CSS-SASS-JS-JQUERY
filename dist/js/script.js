@@ -115,18 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if(window.addEventListener) {
-        // Normal browsers
-        purchaseTable.addEventListener('DOMSubtreeModified', contentChanged, false)
-    } else
-    if (window.attachEvent) {
-        // IE
-        purchaseTable.attachEvent('DOMSubtreeModified', contentChanged)
-    }
+    // if(window.addEventListener) {
+    //     // Normal browsers
+    //     purchaseTable.addEventListener('DOMSubtreeModified', formSum, false)
+    // } else
+    // if (window.attachEvent) {
+    //     // IE
+    //     purchaseTable.attachEvent('DOMSubtreeModified', formSum)
+    // }
 
-    function contentChanged() {
-        formSum()
-    }
     formSum()
 
     /* address input */
@@ -141,10 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Название: ${result.name}, Адрес: ${result.address} Тарифная зона: ${result.zone} Коэффициент: ${result.coeff}`)
     }
 
-    // pickpoint.addEventListener('click', () => {
-    //     PickPoint.open(showAdress, {fromcity:'Москва'});
-    //     return false
-    // })
+    pickpoint.addEventListener('click', () => {
+        PickPoint.open(showAdress, {fromcity:'Москва'});
+        return false
+    })
 
     courier.addEventListener('click', () => {
         addressForm.style.display="block"
