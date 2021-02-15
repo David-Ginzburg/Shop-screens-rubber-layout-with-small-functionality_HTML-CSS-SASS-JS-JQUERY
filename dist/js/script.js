@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
     /* prodduct counter */
 
     const minus = document.querySelectorAll('.purchase__table-count-minus')
-    const figure = document.querySelectorAll('.purchase__table-count-figure')
+    const itemCount = document.querySelectorAll('.purchase__table-count-figure')
     const plus = document.querySelectorAll('.purchase__table-count-plus')
 
     function figureChecker(index) {
-        if (Number(figure[index].textContent) > 0) {
+        if (Number(itemCount[index].textContent) > 0) {
             return true
         } else {
             return false
@@ -32,20 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             const check = figureChecker(index)
             if (check) {
-                figure[index].textContent = Number(figure[index].textContent) - 1
+                itemCount[index].textContent = Number(itemCount[index].textContent) - 1
             }
         })
     })
 
     plus.forEach((item, index) => {
         item.addEventListener('click', () => {
-            figure[index].textContent = Number(figure[index].textContent) + 1
+            itemCount[index].textContent = Number(itemCount[index].textContent) + 1
         })
     })
 
-    /* delivery cost */
+    /* item sum and delivery cost */
 
     const purchaseTable = document.querySelector('.purchase__table')
+    const itemPrice = document.querySelectorAll('.purchase__table-price_actual')
+    const itemElemSum = document.querySelectorAll('.purchase__table-sum-figure')
     const purchaseSum = document.querySelector('.purchase__table-sum-figure_checkout')
     const pickPrice = document.querySelector('.delivery__item-price_pickpoint')
     const courierPrice = document.querySelector('.delivery__item-price_courier')
@@ -53,10 +55,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function formSum() {
         const itemsSum = document.querySelectorAll('.purchase__table-sum-figure')
+        /* item sum */
+        let itemSum = []
+        itemPrice.forEach((item, index) => {
+            itemSum[index] = Number(item.textContent.match(/\d/g).join('') * Number(itemCount[index].textContent))
+        })
+        itemSum.forEach((item, index) => {
+            if (String(item).length > 3) {
+                item = String(item).split('')
+                let finalItemSum = []
+                let itemCount = 0
+                for (let i = item.length - 1; i >= 0; i--) {
+                    itemCount++
+                    if (itemCount % 4 === 0 && itemCount !== 1) {
+                        finalItemSum.unshift(' ')
+                    }
+                    finalItemSum.unshift(item[i])
+                }
+                itemElemSum[index].textContent = `${finalItemSum.join('')} ₽`
+            } else {
+                itemElemSum[index].textContent = `${item} ₽`
+            }    
+        })
+
+        /* final sum */
+        
         let sum = 0
         itemsSum.forEach(item => {
-            sum = sum + Number(item.textContent.match(/\d/g).join('')
-        )})
+            sum = sum + Number(item.textContent.match(/\d/g).join(''))
+        })
         if (String(sum).length > 3) {
             sum = String(sum).split('')
             let finalSum = []
