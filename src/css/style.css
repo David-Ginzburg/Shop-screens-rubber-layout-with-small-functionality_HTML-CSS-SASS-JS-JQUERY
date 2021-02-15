@@ -105,7 +105,9 @@
   border: 1px solid rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   vertical-align: middle;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   cursor: pointer;
 }
@@ -252,6 +254,13 @@
   line-height: 23px;
 }
 
+.address__input::-moz-placeholder {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .address__input::placeholder {
   font-weight: 300;
   font-size: 20px;
@@ -332,7 +341,9 @@
   border: 1px solid rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   vertical-align: middle;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   cursor: pointer;
 }
@@ -448,7 +459,8 @@
   margin: 27px 29px 27px 19px;
   max-width: 70px;
   height: 81px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .purchase__table-name-text {
@@ -510,7 +522,8 @@
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.05em;
-  text-decoration-line: line-through;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -802,7 +815,9 @@
   border: 1px solid rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   vertical-align: middle;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   cursor: pointer;
 }
@@ -918,7 +933,8 @@
   margin: 27px 29px 27px 19px;
   max-width: 70px;
   height: 81px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .purchase__table-name-text {
@@ -980,7 +996,8 @@
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.05em;
-  text-decoration-line: line-through;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -1234,7 +1251,9 @@
   border-radius: 10px;
   background: linear-gradient(135deg, #cecdcd 10%, #ffffff 80% 100%);
   vertical-align: middle;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   cursor: pointer;
   box-shadow: 5px 5px 20px -10px #000000;
@@ -1358,6 +1377,9 @@
   }
   .address__input {
     padding: 10px;
+  }
+  .address__input::-moz-placeholder {
+    font-size: 12px;
   }
   .address__input::placeholder {
     font-size: 12px;
