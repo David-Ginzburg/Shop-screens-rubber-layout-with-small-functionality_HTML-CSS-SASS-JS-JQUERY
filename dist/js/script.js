@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    purchaseTable.addEventListener('DOMSubtreeModified', formSum, false)
+
     // if(window.addEventListener) {
     //     // Normal browsers
     //     purchaseTable.addEventListener('DOMSubtreeModified', formSum, false)
@@ -175,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkItems() {
         let res = checkAllItems()
-        console.log(res)
         if (res) {
             itemChecker.forEach(item => item.checked = false)
             checkAll.checked = false
