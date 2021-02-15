@@ -1,0 +1,35 @@
+{
+  "name": "uber-course",
+  "version": "1.0.0",
+  "description": "https://https://vadim-mostovenko.github.io/Uber-responsive-landing-page_HTML-CSS-JS/src/index.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vadim-Mostovenko/Uber-responsive-landing-page_HTML-CSS-JS.git"
+  },
+  "author": "Vadim Mostovenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vadim-Mostovenko/Uber-responsive-landing-page_HTML-CSS-JS/issues"
+  },
+  "homepage": "https://github.com/Vadim-Mostovenko/Uber-responsive-landing-page_HTML-CSS-JS#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-htmlmin": "^5.0.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
+}

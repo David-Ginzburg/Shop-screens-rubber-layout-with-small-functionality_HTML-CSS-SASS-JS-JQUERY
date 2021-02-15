@@ -27,6 +27,7 @@
             border: 1px solid #F8F8F8;
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
             border-radius: 33px;
+            cursor: pointer;
         }
     }
     &__block {
@@ -61,7 +62,7 @@
         }
     }
     &__adress {
-        width: 334px;
+        width: 80%;
         min-height: 64px;
         display: flex;
         align-items: center;
