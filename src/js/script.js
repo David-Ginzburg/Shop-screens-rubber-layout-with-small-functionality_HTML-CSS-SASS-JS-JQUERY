@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    /* prodduct counter */
+    /* product counter */
 
     const minus = document.querySelectorAll('.purchase__table-count-minus')
     const itemCount = document.querySelectorAll('.purchase__table-count-figure')
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const check = figureChecker(index)
             if (check) {
                 itemCount[index].textContent = Number(itemCount[index].textContent) - 1
+                formSum()
             }
         })
     })
@@ -40,12 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     plus.forEach((item, index) => {
         item.addEventListener('click', () => {
             itemCount[index].textContent = Number(itemCount[index].textContent) + 1
+            formSum()
         })
     })
 
     /* item sum and delivery cost */
 
-    const purchaseTable = document.querySelector('.purchase__table')
     const itemPrice = document.querySelectorAll('.purchase__table-price_actual')
     const itemElemSum = document.querySelectorAll('.purchase__table-sum-figure')
     const purchaseSum = document.querySelector('.purchase__table-sum-figure_checkout')
@@ -114,17 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
             postPrice.innerHTML="449 ₽"
         }
     }
-
-    purchaseTable.addEventListener('DOMSubtreeModified', formSum, false)
-
-    // if(window.addEventListener) {
-    //     // Normal browsers
-    //     purchaseTable.addEventListener('DOMSubtreeModified', formSum, false)
-    // } else
-    // if (window.attachEvent) {
-    //     // IE
-    //     purchaseTable.attachEvent('DOMSubtreeModified', formSum)
-    // }
 
     formSum()
 
