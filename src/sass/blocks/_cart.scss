@@ -1,0 +1,11 @@
+.cart {
+    padding: 50px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__main {
+        width: 70%;
+        margin-right: 50px;
+    }
+}

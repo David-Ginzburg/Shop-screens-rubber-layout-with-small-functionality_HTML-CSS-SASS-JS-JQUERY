@@ -1,0 +1,37 @@
+.checkbox {
+    position: relative;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    vertical-align: middle;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    &::after {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        width: 15px;
+        height: 15px;
+        background: url('../icons/check.svg');
+    }
+    &:checked.checkbox::after {
+        display: block;
+    }
+    &_header {
+        margin-right: 17px;
+    }
+    &_table {
+        margin-right: 35px;
+    }
+    &_policy {
+        margin-right: 26px;
+    }
+    &_default {
+        margin-right: 18px;
+    }
+}

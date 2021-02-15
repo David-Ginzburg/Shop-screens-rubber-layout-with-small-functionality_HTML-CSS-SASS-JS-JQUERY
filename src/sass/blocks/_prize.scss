@@ -1,0 +1,61 @@
+.prize {
+    margin-top: 18px;
+    height: 250px;
+    width: 325px;
+    padding: 10px;
+    text-align: center;
+    &__wrapper {
+        padding: 10px;
+    }
+    &__checkbox {
+        position: relative;
+        margin: 5px;
+        margin-top: 10px;
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #cecdcd 10%, #ffffff 80% 100%);
+        vertical-align: middle;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 5px 5px 20px -10px #000000;
+        &:checked {
+            background: rgb(125, 235, 135);
+        }
+        &::before {
+            display: none;
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 13%;
+            transform: translateY(-50%) rotate(-45deg);
+            width: 31px;
+            height: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #ffffff;
+        }
+        &::after {
+            display: none;
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 54%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 15px;
+            height: 10px;
+            border-bottom-left-radius: 5px;
+            background-color: #ffffff;
+        }
+        &:checked.prize__checkbox::before,
+        &:checked.prize__checkbox::after {
+            display: block;
+        }
+    }
+    &__text {
+        color: #5D5D5D;
+        font-weight: 300;
+        font-size: 16px;
+    }
+}

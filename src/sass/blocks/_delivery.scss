@@ -1,0 +1,41 @@
+.delivery {
+    margin-top: 18px;
+    &__wrapper {
+        margin-top: 33px;
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        width: 340px;
+        height: 130px;
+        padding: 15px 50px;
+        border: 1px solid #E7E7E7;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+        cursor: pointer;
+        &:active {
+            box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        &_pickpoint {
+            background: #E5E5E5;
+        }
+        &_courier {
+            background: #FFFDFD;
+        }
+        &_post {
+            background: #F8F8F8;
+        }
+        &-divider {
+            margin: 15px auto 0;
+            width: 90%;
+            height: 1px;
+            background-color: #000000;
+        }
+        &-price {
+            margin-top: 6px;
+        }
+    }
+}

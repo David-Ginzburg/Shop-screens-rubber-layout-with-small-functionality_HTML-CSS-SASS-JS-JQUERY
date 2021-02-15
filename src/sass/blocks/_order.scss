@@ -1,0 +1,76 @@
+.order {
+    min-width: 380px;
+    &__form {
+        min-height: 825px;
+        padding: 40px 50px 61px 50px;
+        background: #F8F8F8;
+        border: 1px solid #E7E7E7;
+        &-input {
+            margin-top: 10px;
+            padding: 15px;
+            font-size: 16px;
+            width: 100%;
+            height: 54px;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border: none;
+        }
+        &-submit {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 42px;
+            color: #686868;
+            margin-top: 40px;
+            width: 100%;
+            height: 66px;
+            background: #FFFFFF;
+            border: 1px solid #F8F8F8;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+            border-radius: 33px;
+        }
+    }
+    &__block {
+        min-height: 32px;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_light {
+            color: #5D5D5D;
+            font-weight: 300;
+        }
+        &-sum {
+            margin-top: 28px;
+        }
+        &-discount {
+            margin-top: 30px;
+        }
+        &-bonus {
+            margin-top: 10px;
+        }
+        &-delivery {
+            margin-top: 38px;
+        }
+        &-net {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        &-promo {
+            margin-top: 30px;
+        }
+    }
+    &__adress {
+        width: 334px;
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #999999
+    }
+    &__divider {
+        margin-top: 58px;
+    }
+}

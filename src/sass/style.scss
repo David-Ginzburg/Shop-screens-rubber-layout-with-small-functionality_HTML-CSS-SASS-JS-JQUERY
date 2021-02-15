@@ -1,0 +1,25 @@
+@import 'libs/font';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+@import 'blocks/titles';
+@import 'blocks/checkbox';
+@import 'blocks/address';
+@import 'blocks/cart';
+@import 'blocks/purchase';
+@import 'blocks/delivery';
+@import 'blocks/contacts';
+@import 'blocks/purchase';
+@import 'blocks/order';
+@import 'blocks/prize';
+@import 'blocks/media';

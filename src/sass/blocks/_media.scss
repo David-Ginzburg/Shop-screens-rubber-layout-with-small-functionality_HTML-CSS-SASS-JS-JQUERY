@@ -1,0 +1,137 @@
+@media (max-width: 1500px) {
+    .purchase {
+        &__wrapper {
+            margin-left: 0;
+        }
+        &__header {
+            &-text {
+                font-size: 14px;
+            }
+        }
+        &__footer {
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+    .delivery {
+        &__item {
+            padding: 15px;
+            font-size: 17px;
+            width: 200px;
+        }
+    }
+    .contacts {
+        &__wrapper {
+            margin-left: 0;
+        }
+        &-item {
+            &__wrapper {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .purchase {
+        &__table {
+            &-sum {
+                font-size: 20px;
+                &_checkout {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .order {
+        &__form {
+            &-submit {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .cart {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__main {
+            width: 100%;
+        }
+    }
+    .prize {
+        display: none;
+    }
+    .order {
+        margin-top: 50px;
+        margin-left: -30px;
+        margin-right: -30px;
+        margin-bottom: -30px;
+        &__form {
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cart {
+        padding: 25px;
+    }
+    .purchase {
+        &__header {
+            &-text {
+                display: none;
+            }
+        }
+        &__table {
+            &-name {
+                &-img {
+                    margin-right: 10px;
+                }
+            }
+            &-count {
+                max-width: 50px;
+                &-counter {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                }
+            }
+            &-sum {
+                min-width: fit-content;
+                white-space: nowrap;
+                &_checkout {
+                    min-width: fit-content;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &__footer {
+            &-text {
+                display: block;
+            }
+        }
+    }
+    .checkbox_table {
+        margin-right: 5px;
+    }
+    .contacts {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &-item,
+        &-item:first-child {
+            margin: 0;
+        }
+        &-item:not(:first-child) {
+            margin-top: 25px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    
+}

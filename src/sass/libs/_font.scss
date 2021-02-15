@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: local("Roboto-Light"),
+    url(../fonts/Roboto/Roboto-Light.ttf) format("ttf"),
+    url(../fonts/Roboto/Roboto-Light.ttf) format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    src: local("Roboto-Regular"),
+      url(../fonts/Roboto/Roboto-Regular.ttf) format("ttf"),
+      url(../fonts/Roboto/Roboto-Regular.ttf) format("ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: local("Roboto-Medium"),
+    url(../fonts/Roboto/Roboto-Medium.ttf) format("ttf"),
+    url(../fonts/Roboto/Roboto-Medium.ttf) format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: local("robotocondensed-light-webfont"),
+    url(../../fonts/Roboto_Condensed/robotocondensed-light-webfont.woff2) format("woff2"),
+    url(../fonts/Roboto_Condensed/robotocondensed-light-webfont.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: local("robotocondensed-regular-webfont"),
+    url(../../fonts/Roboto_Condensed/robotocondensed-regular-webfont.woff2) format("woff2"),
+    url(../fonts/Roboto_Condensed/robotocondensed-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: local("robotocondensed-bold-webfont"),
+    url(../../fonts/Roboto_Condensed/robotocondensed-bold-webfont.woff2) format("woff2"),
+    url(../fonts/Roboto_Condensed/robotocondensed-bold-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "M PLUS Rounded 1c";
+  font-display: swap;
+  src: local("mplusrounded1c-regular-webfont"),
+    url(../fonts/mplusrounded1c/webfontkit-20210213-150533/mplusrounded1c-regular-webfont.woff2) format("woff2"),
+    url(../fonts/mplusrounded1c/webfontkit-20210213-150533/mplusrounded1c-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "M PLUS Rounded 1c";
+    font-display: swap;
+    src: local("mplusrounded1c-bold-webfont"),
+      url(../fonts/mplusrounded1c/webfontkit-20210213-150533/mplusrounded1c-bold-webfont.woff2) format("woff2"),
+      url(../fonts/mplusrounded1c/webfontkit-20210213-150533/mplusrounded1c-bold-webfont.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "M PLUS Rounded 1c";
+  font-display: swap;
+  src: local("mplusrounded1c-extrabold-webfont"),
+    url(../fonts/mplusrounded1c/webfontkit-20210213-150533/mplusrounded1c-extrabold-webfont.woff2) format("woff2"),
+    url(../fonts/mplusrounded1c/webfontkit-20210213-150533/mplusrounded1c-extrabold-webfont.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
