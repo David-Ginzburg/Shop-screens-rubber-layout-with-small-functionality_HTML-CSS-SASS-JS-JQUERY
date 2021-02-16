@@ -50,13 +50,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const itemPrice = document.querySelectorAll('.purchase__table-price_actual')
     const itemElemSum = document.querySelectorAll('.purchase__table-sum-figure')
     const purchaseSum = document.querySelector('.purchase__table-sum-figure_checkout')
+
     const pickPrice = document.querySelector('.delivery__item-price_pickpoint')
     const courierPrice = document.querySelector('.delivery__item-price_courier')
     const postPrice = document.querySelector('.delivery__item-price_post')
+    
 
     function formSum() {
-        const itemsSum = document.querySelectorAll('.purchase__table-sum-figure')
         /* item sum */
+
+        const itemsSum = document.querySelectorAll('.purchase__table-sum-figure')
         let itemSum = []
         itemPrice.forEach((item, index) => {
             itemSum[index] = Number(item.textContent.match(/\d/g).join('') * Number(itemCount[index].textContent))
@@ -192,5 +195,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
         checkAll.checked = false
+        formSum()
+    })
+
+    /* menu toggler */
+    const menuButtons = document.querySelectorAll('.information__menu-item')
+    console.log(menuButtons)
+    menuButtons.forEach(item => {
+        console.log(item)
+        item.addEventListener('click', () => {
+            menuButtons.forEach(item => item.classList.remove('information__menu-item_active'))
+            item.classList.add('information__menu-item_active')
+        })
     })
 });

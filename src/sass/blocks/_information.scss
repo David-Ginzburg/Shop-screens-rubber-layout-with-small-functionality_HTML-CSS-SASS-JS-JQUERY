@@ -1,0 +1,91 @@
+.information {
+    padding: 50px;
+    letter-spacing: -0.1em;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__header {
+        padding: 50px;
+        text-align: center;
+        &-title {
+            font-weight: 300;
+            font-size: 36px;
+            line-height: 42px;
+        }
+        &-subtitle {
+            margin-top: 14px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+    &__menu {
+        max-width: 650px;
+        width: 35%;
+        margin-right: 60px;
+        flex-shrink: 0;
+        &-item {
+            position: relative;
+            padding: 11px;
+            padding-left: 28px;
+            padding-right: 50px;
+            background: #F5F5F5;
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 33px;
+            text-transform: uppercase;
+            cursor: pointer;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 19px;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 18px;
+                background: url('../icons/downArrow.png') no-repeat center / cover;
+            }
+            &:hover {
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+            &_active {
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                &::before {
+                    background: url('../icons/upArrow.png') no-repeat center / cover;
+                }
+            }
+        }
+    }
+    &__paragraph {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        &-item {
+            display: none;
+            &_active {
+                display: block;
+            }
+        }
+        &-list {
+            padding-left: 60px;
+            list-style-position: inside;
+            margin-top: 30px;
+            li {
+                margin-top: 23px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            &_pad0 {
+                padding-left: 0;
+            }
+        }
+        &-text {
+            &:not(:last-child) {
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
