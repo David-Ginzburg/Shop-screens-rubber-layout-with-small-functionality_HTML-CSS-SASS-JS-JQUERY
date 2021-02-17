@@ -1,3 +1,30 @@
+@media (max-width: 1919px) {
+    /* information */
+    .title {
+        &_information {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 400;
+        }
+    }
+    .information {
+        &__paragraph {
+            &-text {
+                font-size: 18px;
+                line-height: 30px;
+            }
+            &-list {
+                font-size: 18px;
+                line-height: 30px;
+                li {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1500px) {
     /* cart */
     .purchase {
@@ -32,8 +59,32 @@
             }
         }
     }
+}
 
+@media (max-width: 1400px) {
     /* information */
+    .information {
+        &__menu {
+            &-item {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        &__paragraph {
+            &-text {
+                font-size: 18px;
+                line-height: 25px;
+            }
+            &-list {
+                font-size: 18px;
+                line-height: 25px;
+                li {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -57,7 +108,34 @@
     }
 
     /* information */
-
+    .title {
+        &_information {
+            font-size: 22px;
+            line-height: 25px;
+        }
+    }
+    .information {
+        &__menu {
+            &-item {
+                font-size: 22px;
+                line-height: 25px;
+            }
+        }
+        &__paragraph {
+            &-text {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            &-list {
+                font-size: 16px;
+                line-height: 20px;
+                li {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -141,6 +219,9 @@
     }
     .title {
         text-align: center;
+        &_information {
+            text-align-last: left;
+        }
     }
     .purchase {
         &__header {
@@ -351,24 +432,8 @@
                 font-size: 15px;
             }
         }
-        &__menu {
-            &-item {
-                font-size: 20px;
-                line-height: 20px;
-                text-align: center;
-            }
-        }
         &__paragraph {
             hyphens: auto;
-            // word-break: break-all;
-            &-text {
-                font-size: 20px;
-                line-height: 20px;
-            }
-            &-list {
-                font-size: 20px;
-                line-height: 20px;
-            }
         }
     }
 }
