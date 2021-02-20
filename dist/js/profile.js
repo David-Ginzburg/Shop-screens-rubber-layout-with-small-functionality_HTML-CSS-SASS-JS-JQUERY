@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuItems.forEach(item => {
                 item.classList.remove('profile__menu-item_big_active')
                 menuSmallItems[index].classList.remove('profile__menu-item_small_active')
+                hideBlock(index)
             })
             menuSmallItems[index].classList.add('profile__menu-item_small_active')
             item.classList.add('profile__menu-item_big_active')
@@ -102,27 +103,166 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    /* show/hide all */
+    /* delete favorities */
 
-    const showButtons = document.querySelectorAll('.profile__block-header-show')
-    const hideButtons = document.querySelectorAll('.profile__block-header-hide')
-    const carousels = document.querySelectorAll('.profile__carousel')
+    const items = document.querySelectorAll('.SelectItemDiv3')
+    const hearts = document.querySelectorAll('.WishlistHeartSelected')
 
-    hideButtons.forEach(item => item.style.display = "none")
-
-    showButtons.forEach((item, index) => {
+    hearts.forEach((item, index) => {
         item.addEventListener('click', () => {
-            hideButtons[index].style.display = "block"
-            carousels[index].style.display = "none"
-            item.style.display = "none"
+            items[index].remove()
         })
     })
 
-    hideButtons.forEach((item, index) => {
+    /* purchase carousel */
+
+    const purchaseShowButton = document.querySelector('.profile__block-header_purchase .profile__block-header-show')
+    const purchaseHideButton = document.querySelector('.profile__block-header_purchase .profile__block-header-hide')
+    const purchaseCarousel = document.querySelector('.profile__block-header_purchase .profile__carousel')
+
+    purchaseHideButton.style.display = "none"
+
+    purchaseShowButton.addEventListener('click', () => {
+            purchaseHideButton.style.display = "block"
+            purchaseCarousel.style.display = "none"
+            purchaseShowButton.style.display = "none"
+            purchaseItems.forEach(item => item.style.display="block")
+    })
+
+    purchaseHideButton.addEventListener('click', () => {
+            purchaseHideButton.style.display = "none"
+            purchaseCarousel.style.display = "flex"
+            purchaseShowButton.style.display = "block"
+            hideAllBlocks()
+            purchaseItems[purchaseBlocksIndex].style.display="block"
+    })
+
+    /* switch blocks */
+
+    const purchaseRightArrow = document.querySelector('.profile__carousel_purchase .profile__carousel-right-arrow')
+    const purchaseLeftArrow = document.querySelector('.profile__carousel_purchase .profile__carousel-left-arrow')
+    const purchaseCarouseelFiguries = document.querySelectorAll('.profile__carousel_purchase .profile__carousel-figure')
+    
+    let purchaseBlocksIndex = 0
+
+        /* show first block */
+
+    purchaseItems.forEach((item, index) => {
+        if (index !== 0) {
+            item.style.display="none"
+        }
+        purchaseCarouseelFiguries[0].classList.add('profile__carousel-figure_active')
+    })
+
+        /* hide all blocks */
+
+    const hideAllBlocks = () => {purchaseItems.forEach(item => item.style.display="none")}
+    const removeAllActiveFigures = () => {purchaseCarouseelFiguries.forEach(item => item.classList.remove('profile__carousel-figure_active'))}
+
+    purchaseRightArrow.addEventListener('click', () => {
+        if (purchaseBlocksIndex < purchaseItems.length - 1) {
+            purchaseBlocksIndex++
+            hideAllBlocks()
+            removeAllActiveFigures()
+            purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
+            purchaseItems[purchaseBlocksIndex].style.display="block"
+        }
+    })
+
+    purchaseLeftArrow.addEventListener('click', () => {
+        if (purchaseBlocksIndex > 0) {
+            purchaseBlocksIndex--
+            hideAllBlocks()
+            removeAllActiveFigures()
+            purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
+            purchaseItems[purchaseBlocksIndex].style.display="block"
+        }
+    })
+
+    purchaseCarouseelFiguries.forEach((item, index) => {
         item.addEventListener('click', () => {
-            item.style.display = "none"
-            carousels[index].style.display = "flex"
-            showButtons[index].style.display = "block"
+            hideAllBlocks()
+            removeAllActiveFigures()
+            purchaseBlocksIndex = index
+            purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
+            purchaseItems[purchaseBlocksIndex].style.display="block"
         })
     })
+
+
+    /* favorite carousel */
+
+    const favoriteShowButton = document.querySelector('.profile__block-header_favorites .profile__block-header-show')
+    const favoriteHideButton = document.querySelector('.profile__block-header_favorites .profile__block-header-hide')
+    const favoriteCarousel = document.querySelector('.profile__block-header_favorites .profile__carousel')
+
+    favoriteHideButton.style.display = "none"
+
+    favoriteShowButton.addEventListener('click', () => {
+        favoriteHideButton.style.display = "block"
+        favoriteCarousel.style.display = "none"
+        favoriteShowButton.style.display = "none"
+        // purchaseItems.forEach(item => item.style.display="block")
+    })
+
+    favoriteHideButton.addEventListener('click', () => {
+        favoriteHideButton.style.display = "none"
+        favoriteCarousel.style.display = "flex"
+        favoriteShowButton.style.display = "block"
+        // hideAllBlocks()
+        // purchaseItems[purchaseBlocksIndex].style.display="block"
+    })
+
+    /* switch blocks */
+
+    const favoriteRightArrow = document.querySelector('.profile__carousel_favorite .profile__carousel-right-arrow')
+    const favoriteLeftArrow = document.querySelector('.profile__carousel_favorite .profile__carousel-left-arrow')
+    const favoriteCarouseelFiguries = document.querySelectorAll('.profile__carousel_favorite .profile__carousel-figure')
+    const favoriteItems = document.querySelector('.profile__favorites').childNodes
+
+    let favoriteBlocksIndex = 0
+
+        /* show first block */
+
+    // purchaseItems.forEach((item, index) => {
+    //     if (index !== 0) {
+    //         item.style.display="none"
+    //     }
+    //     purchaseCarouseelFiguries[0].classList.add('profile__carousel-figure_active')
+    // })
+
+    //     /* hide all blocks */
+
+    // const hideAllBlocks = () => {purchaseItems.forEach(item => item.style.display="none")}
+    // const removeAllActiveFigures = () => {purchaseCarouseelFiguries.forEach(item => item.classList.remove('profile__carousel-figure_active'))}
+
+    // purchaseRightArrow.addEventListener('click', () => {
+    //     if (purchaseBlocksIndex < purchaseItems.length - 1) {
+    //         purchaseBlocksIndex++
+    //         hideAllBlocks()
+    //         removeAllActiveFigures()
+    //         purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
+    //         purchaseItems[purchaseBlocksIndex].style.display="block"
+    //     }
+    // })
+
+    // purchaseLeftArrow.addEventListener('click', () => {
+    //     if (purchaseBlocksIndex > 0) {
+    //         purchaseBlocksIndex--
+    //         hideAllBlocks()
+    //         removeAllActiveFigures()
+    //         purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
+    //         purchaseItems[purchaseBlocksIndex].style.display="block"
+    //     }
+    // })
+
+    // purchaseCarouseelFiguries.forEach((item, index) => {
+    //     item.addEventListener('click', () => {
+    //         hideAllBlocks()
+    //         removeAllActiveFigures()
+    //         purchaseBlocksIndex = index
+    //         purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
+    //         purchaseItems[purchaseBlocksIndex].style.display="block"
+    //     })
+    // })
 });

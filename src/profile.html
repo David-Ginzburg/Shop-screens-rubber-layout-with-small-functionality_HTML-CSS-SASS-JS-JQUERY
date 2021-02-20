@@ -137,7 +137,7 @@
                     <li class="profile__menu-item profile__menu-item_big">Настройки рассылки</li>
                     <li class="profile__menu-item profile__menu-item_big">Мои адреса доставки</li>
                     <li class="profile__menu-item profile__menu-item_big">Моя дисконтная карта</li>
-                    <li class="profile__menu-item profile__menu-item_big">Личные данные</li>
+                    <li class="profile__menu-item profile__menu-item_big profile__menu-item_big_active">Личные данные</li>
                     <li class="profile__menu-item profile__menu-item_big">Настройки</li>
                     <li class="profile__menu-item">Выйти</li>
                 </ul>
@@ -147,14 +147,21 @@
 
                 <div class="profile__menu-item profile__menu-item_small">Избранное</div>
                 <div class="profile__block">
-                    <div class="profile__block-header">
+                    <div class="profile__block-header profile__block-header_favorites">
                         <div class="title title_profile">Мой лист пожеланий</div>
-                        <div class="profile__carousel">
-                            <img src="icons/leftArrow.png" alt="leftArrow" class="profile__carousel-arrow">
-                            <div class="profile__carousel-figure">1</div>
+                        <div class="profile__carousel profile__carousel_favorites profile__carousel_favorites_blocks">
+                            <img src="icons/leftArrow.png" alt="leftArrow" class="profile__carousel-left-arrow">
+                            <div class="profile__carousel-figure profile__carousel-figure_active">1</div>
                             <div class="profile__carousel-figure">2</div>
                             <div class="profile__carousel-figure">3</div>
-                            <img src="icons/rightArrow.png" alt="rightArrow" class="profile__carousel-arrow">
+                            <img src="icons/rightArrow.png" alt="rightArrow" class="profile__carousel-right-arrow">
+                        </div>
+                        <div class="profile__carousel profile__carousel_favorites profile__carousel_favorites_items">
+                            <img src="icons/leftArrow.png" alt="leftArrow" class="profile__carousel-left-arrow">
+                            <div class="profile__carousel-figure profile__carousel-figure_active">1</div>
+                            <div class="profile__carousel-figure">2</div>
+                            <div class="profile__carousel-figure">3</div>
+                            <img src="icons/rightArrow.png" alt="rightArrow" class="profile__carousel-right-arrow">
                         </div>
                         <div class="profile__block-header-show">Показать все</div>
                         <div class="profile__block-header-hide">Вернуться</div>
@@ -163,67 +170,70 @@
                         <div class="profile__favorites">
                             <div class="SelectItemDiv3">
                                 <div class="productWraper">
-                                    <div class="ImageFrame"><div class="Img3"></div><div onclick="this.classList.toggle('WishlistHeartSelected');"  class="WishlistHeart"></div><div class="DiscountOffer"><div class="DiscountOfferText"></div></div>
+                                    <div class="ImageFrame"><div class="Img3"></div><div onclick="this.classList.toggle('WishlistHeartSelected');"  class="WishlistHeart WishlistHeartSelected"></div><div class="DiscountOffer"><div class="DiscountOfferText"></div></div>
                                     </div>
                                     <label  class="smallText1">ПАРФЮМЕРНАЯ ВОДА</label>
                                     <label  class="mediumText1">ESTEE LAUDER beautiful <br> absolu</label>
                                     <label  class="priceText"> 2 400 ₽    <s>3 000 ₽</s></label>
                                     <label  class="starsRating">243</label>
+                                    <div class="Rectangle4"><label class="Rectangle4Text">В корзину</label></div>
                                     <div class="rate">
-                                        <input type="radio"  name="rate" value="5" />
-                                        <label  title="text">5 stars</label>
-                                        <input type="radio"  name="rate" value="4" />
-                                        <label  title="text">4 stars</label>
-                                        <input type="radio"  name="rate" value="3" />
-                                        <label  title="text">3 stars</label>
-                                        <input type="radio"  name="rate" value="2" />
-                                        <label  title="text">2 stars</label>
-                                        <input type="radio"  name="rate" value="1" />
-                                        <label  title="text">1 star</label>
+                                        <input type="radio"  name="rate1" value="5" id="product1_star_5" />
+                                        <label for="product1_star_5" title="text">5 stars</label>
+                                        <input type="radio"  name="rate1" value="4" id="product1_star_4" />
+                                        <label for="product1_star_4" title="text">4 stars</label>
+                                        <input type="radio"  name="rate1" value="3" id="product1_star_3"/>
+                                        <label for="product1_star_3" title="text">3 stars</label>
+                                        <input type="radio"  name="rate1" value="2" id="product1_star_2"/>
+                                        <label for="product1_star_2" title="text">2 stars</label>
+                                        <input type="radio"  name="rate1" value="1" id="product1_star_1"/>
+                                        <label for="product1_star_1" title="text">1 star</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="SelectItemDiv3">
                                 <div class="productWraper">
-                                    <div class="ImageFrame"><div class="Img3"></div><div onclick="this.classList.toggle('WishlistHeartSelected');"  class="WishlistHeart"></div><div class="DiscountOffer"><div class="DiscountOfferText"></div></div>
+                                    <div class="ImageFrame"><div class="Img3"></div><div onclick="this.classList.toggle('WishlistHeartSelected');"  class="WishlistHear WishlistHeartSelected"></div><div class="DiscountOffer"><div class="DiscountOfferText"></div></div>
                                     </div>
                                     <label  class="smallText1">ПАРФЮМЕРНАЯ ВОДА</label>
                                     <label  class="mediumText1">ESTEE LAUDER beautiful <br> absolu</label>
                                     <label  class="priceText"> 2 400 ₽    <s>3 000 ₽</s></label>
                                     <label  class="starsRating">243</label>
+                                    <div class="Rectangle4"><label class="Rectangle4Text">В корзину</label></div>
                                     <div class="rate">
-                                        <input type="radio"  name="rate" value="5" />
-                                        <label  title="text">5 stars</label>
-                                        <input type="radio"  name="rate" value="4" />
-                                        <label  title="text">4 stars</label>
-                                        <input type="radio"  name="rate" value="3" />
-                                        <label  title="text">3 stars</label>
-                                        <input type="radio"  name="rate" value="2" />
-                                        <label  title="text">2 stars</label>
-                                        <input type="radio"  name="rate" value="1" />
-                                        <label  title="text">1 star</label>
+                                        <input type="radio"  name="rate2" value="5" id="product2_star_5" />
+                                        <label for="product2_star_5" title="text">5 stars</label>
+                                        <input type="radio"  name="rate2" value="4" id="product2_star_4" />
+                                        <label for="product2_star_4" title="text">4 stars</label>
+                                        <input type="radio"  name="rate2" value="3" id="product2_star_3"/>
+                                        <label for="product2_star_3" title="text">3 stars</label>
+                                        <input type="radio"  name="rate2" value="2" id="product2_star_2"/>
+                                        <label for="product2_star_2" title="text">2 stars</label>
+                                        <input type="radio"  name="rate2" value="1" id="product2_star_1"/>
+                                        <label for="product2_star_1" title="text">1 star</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="SelectItemDiv3">
                                 <div class="productWraper">
-                                    <div class="ImageFrame"><div class="Img3"></div><div onclick="this.classList.toggle('WishlistHeartSelected');"  class="WishlistHeart"></div><div class="DiscountOffer"><div class="DiscountOfferText"></div></div>
+                                    <div class="ImageFrame"><div class="Img3"></div><div onclick="this.classList.toggle('WishlistHeartSelected');"  class="WishlistHeart WishlistHeartSelected"></div><div class="DiscountOffer"><div class="DiscountOfferText"></div></div>
                                     </div>
                                     <label  class="smallText1">ПАРФЮМЕРНАЯ ВОДА</label>
                                     <label  class="mediumText1">ESTEE LAUDER beautiful <br> absolu</label>
                                     <label  class="priceText"> 2 400 ₽    <s>3 000 ₽</s></label>
                                     <label  class="starsRating">243</label>
+                                    <div class="Rectangle4"><label class="Rectangle4Text">В корзину</label></div>
                                     <div class="rate">
-                                        <input type="radio"  name="rate" value="5" />
-                                        <label  title="text">5 stars</label>
-                                        <input type="radio"  name="rate" value="4" />
-                                        <label  title="text">4 stars</label>
-                                        <input type="radio"  name="rate" value="3" />
-                                        <label  title="text">3 stars</label>
-                                        <input type="radio"  name="rate" value="2" />
-                                        <label  title="text">2 stars</label>
-                                        <input type="radio"  name="rate" value="1" />
-                                        <label  title="text">1 star</label>
+                                        <input type="radio"  name="rate3" value="5" id="product3_star_5" />
+                                        <label for="product3_star_5" title="text">5 stars</label>
+                                        <input type="radio"  name="rate3" value="4" id="product3_star_4" />
+                                        <label for="product3_star_4" title="text">4 stars</label>
+                                        <input type="radio"  name="rate3" value="3" id="product3_star_3"/>
+                                        <label for="product3_star_3" title="text">3 stars</label>
+                                        <input type="radio"  name="rate3" value="2" id="product3_star_2"/>
+                                        <label for="product3_star_2" title="text">2 stars</label>
+                                        <input type="radio"  name="rate3" value="1" id="product3_star_1"/>
+                                        <label for="product3_star_1" title="text">1 star</label>
                                     </div>
                                 </div>
                             </div>
@@ -233,14 +243,14 @@
 
                 <div class="profile__menu-item profile__menu-item_small">Мои покупки</div>
                 <div class="profile__block">
-                    <div class="profile__block-header">
+                    <div class="profile__block-header profile__block-header_purchase">
                         <div class="title title_profile">Мои покупки</div>
-                        <div class="profile__carousel">
-                            <img src="icons/leftArrow.png" alt="leftArrow" class="profile__carousel-arrow">
-                            <div class="profile__carousel-figure">1</div>
+                        <div class="profile__carousel profile__carousel_purchase">
+                            <img src="icons/leftArrow.png" alt="leftArrow" class="profile__carousel-left-arrow">
+                            <div class="profile__carousel-figure profile__carousel-figure_active">1</div>
                             <div class="profile__carousel-figure">2</div>
                             <div class="profile__carousel-figure">3</div>
-                            <img src="icons/rightArrow.png" alt="rightArrow" class="profile__carousel-arrow">
+                            <img src="icons/rightArrow.png" alt="rightArrow" class="profile__carousel-right-arrow">
                         </div>
                         <div class="profile__block-header-show">Показать все</div>
                         <div class="profile__block-header-hide">Вернуться</div>
@@ -333,6 +343,7 @@
                                                 <div class="purchase__table-sum-figure_checkout">100 800 ₽</div>
                                             </td>
                                         </tr>
+                                        
                                     </table>
                                 </div>
                             </div>
@@ -343,7 +354,7 @@
                                         <input type="checkbox" class="checkbox checkbox_header" name="check_all_items">
                                         <div class="purchase__header-select">Выбрать все</div>
                                         <div class="purchase__header-toChart">Отправить в корзину</div>
-                                        <div class="purchase__header-text purchase__header-text_profile">Покупки от 21.12.20</div>
+                                        <div class="purchase__header-text purchase__header-text_profile">Покупки от 12.12.20</div>
                                     </div>
                                     <table class="purchase__table">
                                         <tr class="purchase__table-header">
@@ -411,7 +422,36 @@
                                                 <div class="purchase__table-sum-text">Сумма</div>
                                                 <div class="purchase__table-sum-figure">93 600 ₽</div>
                                             </td>
-                                            </tr>
+                                        </tr>
+                                        <tr class="purchase__table-row">
+                                            <td class="purchase__table-check"><input type="checkbox" class="checkbox checkbox_table" name="check_item"></td>
+                                            <td class="purchase__table-name">
+                                                <div class="purchase__table-name-wrapper">
+                                                    <img src="img/Парфюм.png" alt="Парфюм" class="purchase__table-name-img">
+                                                    <div class="purchase__table-name-text">
+                                                        <div class="purchase__table-name-text-title">ESTEE LAUDER beautiful absolu</div>
+                                                        <div class="purchase__table-name-text-subtitle">ПАРФЮМЕРНАЯ ВОДА</div>
+                                                    </div>
+                                                </div>
+                                            </td> 
+                                            <td class="purchase__table-price">
+                                                <div class="purchase__table-price-text">Цена:</div>
+                                                <div class="purchase__table-price-wrapper">
+                                                <div class="purchase__table-price_actual">4 600 ₽</div>
+                                                <div class="purchase__table-price_last"></div>
+                                                </div>
+                                            </td>
+                                            <td class="purchase__table-count">
+                                            <div class="purchase__table-count-text">Количество:</div>
+                                                <div class="purchase__table-count-counter purchase__table-count-counter_profile">
+                                                    <div class="purchase__table-count-figure purchase__table-count-figure_profile">1</div>
+                                                </div>
+                                            </td>
+                                            <td class="purchase__table-sum">
+                                            <div class="purchase__table-sum-text">Сумма</div>
+                                            <div class="purchase__table-sum-figure">13 800 ₽</div>
+                                            </td>
+                                        </tr>
                                         <tr class="purchase__table-row purchase__table-row_checkout">
                                             <td class="purchase__table-check_checkout"></td>
                                             <td class="purchase__table-name"></td> 
@@ -425,6 +465,125 @@
                                     </table>
                                 </div>
                             </div>
+
+                            <div class="purchase__item">
+                                <div class="purchase__wrapper">
+                                    <div class="purchase__header">
+                                        <input type="checkbox" class="checkbox checkbox_header" name="check_all_items">
+                                        <div class="purchase__header-select">Выбрать все</div>
+                                        <div class="purchase__header-toChart">Отправить в корзину</div>
+                                        <div class="purchase__header-text purchase__header-text_profile">Покупки от 10.12.20</div>
+                                    </div>
+                                    <table class="purchase__table">
+                                        <tr class="purchase__table-header">
+                                            <th class="purchase__table-header-check"></th>
+                                            <th class="purchase__table-header-name">Товар</th> 
+                                            <th class="purchase__table-header-price">Цена</th>
+                                            <th class="purchase__table-header-count">Кол-во</th>
+                                            <th class="purchase__table-header-sum">Итого</th>
+                                        </tr>
+    
+                                        <tr class="purchase__table-row">
+                                            <td class="purchase__table-check"><input type="checkbox" class="checkbox checkbox_table" name="check_item"></td>
+                                            <td class="purchase__table-name">
+                                                <div class="purchase__table-name-wrapper">
+                                                    <img src="img/Парфюм.png" alt="Парфюм" class="purchase__table-name-img">
+                                                    <div class="purchase__table-name-text">
+                                                        <div class="purchase__table-name-text-title">ESTEE LAUDER beautiful absolu</div>
+                                                        <div class="purchase__table-name-text-subtitle">ПАРФЮМЕРНАЯ ВОДА</div>
+                                                    </div>
+                                                </div>
+                                            </td> 
+                                            <td class="purchase__table-price">
+                                                <div class="purchase__table-price-text">Цена:</div>
+                                                <div class="purchase__table-price-wrapper">
+                                                <div class="purchase__table-price_actual">4 600 ₽</div>
+                                                <div class="purchase__table-price_last"></div>
+                                                </div>
+                                            </td>
+                                            <td class="purchase__table-count">
+                                            <div class="purchase__table-count-text">Количество:</div>
+                                                <div class="purchase__table-count-counter purchase__table-count-counter_profile">
+                                                    <div class="purchase__table-count-figure purchase__table-count-figure_profile">1</div>
+                                                </div>
+                                            </td>
+                                            <td class="purchase__table-sum">
+                                            <div class="purchase__table-sum-text">Сумма</div>
+                                            <div class="purchase__table-sum-figure">13 800 ₽</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="purchase__table-row">
+                                            <td class="purchase__table-check"><input type="checkbox" class="checkbox checkbox_table" name="check_item"></td>
+                                            <td class="purchase__table-name">
+                                                <div class="purchase__table-name-wrapper">
+                                                    <img src="img/Палетка.png" alt="Палетка" class="purchase__table-name-img">
+                                                    <div class="purchase__table-name-text">
+                                                        <div class="purchase__table-name-text-title">ESTEE LAUDER beautiful absolu</div>
+                                                        <div class="purchase__table-name-text-subtitle">ПАЛЕТКА ХАЙЛАЙТЕРОВ</div>
+                                                    </div>
+                                                </div>
+                                            </td> 
+                                            <td class="purchase__table-price">
+                                                <div class="purchase__table-price-text">Цена:</div>
+                                                <div class="purchase__table-price-wrapper">
+                                                    <div class="purchase__table-price_actual">2 400 ₽</div>
+                                                    <div class="purchase__table-price_last">3000 ₽</div>
+                                                </div>
+                                                </td>
+                                            <td class="purchase__table-count">
+                                                <div class="purchase__table-count-text">Количество:</div>
+                                                <div class="purchase__table-count-counter purchase__table-count-counter_profile">
+                                                    <div class="purchase__table-count-figure purchase__table-count-figure_profile">3</div>
+                                                </div>
+                                                </td>
+                                            <td class="purchase__table-sum">
+                                                <div class="purchase__table-sum-text">Сумма</div>
+                                                <div class="purchase__table-sum-figure">93 600 ₽</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="purchase__table-row">
+                                            <td class="purchase__table-check"><input type="checkbox" class="checkbox checkbox_table" name="check_item"></td>
+                                            <td class="purchase__table-name">
+                                                <div class="purchase__table-name-wrapper">
+                                                    <img src="img/Палетка.png" alt="Палетка" class="purchase__table-name-img">
+                                                    <div class="purchase__table-name-text">
+                                                        <div class="purchase__table-name-text-title">ESTEE LAUDER beautiful absolu</div>
+                                                        <div class="purchase__table-name-text-subtitle">ПАЛЕТКА ХАЙЛАЙТЕРОВ</div>
+                                                    </div>
+                                                </div>
+                                            </td> 
+                                            <td class="purchase__table-price">
+                                                <div class="purchase__table-price-text">Цена:</div>
+                                                <div class="purchase__table-price-wrapper">
+                                                    <div class="purchase__table-price_actual">2 400 ₽</div>
+                                                    <div class="purchase__table-price_last">3000 ₽</div>
+                                                </div>
+                                                </td>
+                                            <td class="purchase__table-count">
+                                                <div class="purchase__table-count-text">Количество:</div>
+                                                <div class="purchase__table-count-counter purchase__table-count-counter_profile">
+                                                    <div class="purchase__table-count-figure purchase__table-count-figure_profile">3</div>
+                                                </div>
+                                                </td>
+                                            <td class="purchase__table-sum">
+                                                <div class="purchase__table-sum-text">Сумма</div>
+                                                <div class="purchase__table-sum-figure">93 600 ₽</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="purchase__table-row purchase__table-row_checkout">
+                                            <td class="purchase__table-check_checkout"></td>
+                                            <td class="purchase__table-name"></td> 
+                                            <td class="purchase__table-price"></td>
+                                            <td class="purchase__table-count"></td>
+                                            <td class="purchase__table-sum purchase__table-sum_checkout">
+                                                <div class="purchase__table-sum-text purchase__table-sum-text_checkout">Итого</div>
+                                                <div class="purchase__table-sum-figure_checkout">100 800 ₽</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
                         </div>
                     </div>                        
                 </div>
@@ -520,8 +679,8 @@
                     </div>
                 </div>
 
-                <div class="profile__menu-item profile__menu-item_small">Личные данные</div>
-                <div class="profile__block">
+                <div class="profile__menu-item profile__menu-item_small profile__menu-item_small_active">Личные данные</div>
+                <div class="profile__block profile__block_active">
                     <h2 class="title title_profile">Заполните личные данные и получите бонусную карту</h2>
                     <div class="profile__block-wrapper">
                         <div class="profile__block-body">
@@ -611,7 +770,7 @@
                         <div class="profile-settings__header-text_small">Удаляя персональную информацию вы так же удаляете ваши накопленные баллы и данные о персональной скидке</div>
                         <div class="profile-settings__row profile-settings__row_delete">
                             <button class="button button_delete">Удалить данные аккаунта</button>
-                        </div> 
+                        </div>
                     </div>
                 </div>
 

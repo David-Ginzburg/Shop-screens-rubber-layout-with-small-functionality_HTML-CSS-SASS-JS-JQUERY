@@ -86,11 +86,17 @@
         &__desc {
             font-size: 0.6rem;
         }
+        &__text {
+            margin-top: 0;
+        }
     }
 }
 
 @media (max-width: 768px) {
     .whatsapp {
+        &__desc {
+            font-size: 0.9rem;
+        }
         &_top {
             display: none;
         }

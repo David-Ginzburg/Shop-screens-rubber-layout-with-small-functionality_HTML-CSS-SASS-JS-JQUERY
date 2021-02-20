@@ -30,6 +30,9 @@
         &_profile {
             font-size: 0.8rem;
         }
+        &_delete {
+            font-size: 2vw;
+        }
     }
 }
 
@@ -38,6 +41,9 @@
         font-size: 1.2rem;
         &_profile {
             font-size: 0.7rem;
+        }
+        &_delete {
+            font-size: 1.8vw;
         }
     }
 }
@@ -53,11 +59,17 @@
 @media (max-width: 768px) {
     .button {
         font-size: 3.5vw;
+        &_delete {
+            font-size: 3.8vw;
+        }
     }
 }
 
 @media (max-width: 576px) {
     .button {
         font-size: 3.5vw;
+        &_delete {
+            font-size: 4.3vw;
+        }
     }
 }
