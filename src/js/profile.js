@@ -76,17 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuItems.forEach((item, index) => {
         item.addEventListener('click', () => {
-            if (item.classList.contains('profile__menu-item_big_active')) {
-                hideBlock(index)
+            menuItems.forEach(item => {
                 item.classList.remove('profile__menu-item_big_active')
                 menuSmallItems[index].classList.remove('profile__menu-item_small_active')
-            } else {
-                menuItems.forEach(item => {
-                    item.classList.remove('profile__menu-item_big_active')
-                })
-                item.classList.add('profile__menu-item_big_active')
-                showBlock(index)
-            }
+            })
+            menuSmallItems[index].classList.add('profile__menu-item_small_active')
+            item.classList.add('profile__menu-item_big_active')
+            showBlock(index)
         })
     })
 
@@ -96,12 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 hideBlock(index)
                 item.classList.remove('profile__menu-item_small_active')
                 menuItems[index].classList.remove('profile__menu-item_big_active')
+            } else {
+                menuSmallItems.forEach(item => {
+                    item.classList.remove('profile__menu-item_small_active')
+                })
+                showBlock(index)
+                item.classList.add('profile__menu-item_small_active')
             }
-            menuSmallItems.forEach(item => {
-                item.classList.remove('profile__menu-item_small_active')
-            })
-            showBlock(index)
-            item.classList.add('profile__menu-item_small_active')
         })
     })
 
