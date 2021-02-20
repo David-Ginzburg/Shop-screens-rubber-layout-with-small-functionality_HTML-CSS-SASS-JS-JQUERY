@@ -91,6 +91,9 @@
             &:not(:last-child) {
                 margin-bottom: 27px;
             }
+            &_bold {
+                font-weight: 400;
+            }
         }
     }
 }

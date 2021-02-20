@@ -2706,6 +2706,10 @@ s {
   margin-bottom: 27px;
 }
 
+.information__paragraph-text_bold {
+  font-weight: 400;
+}
+
 @media (max-width: 1919px) {
   .information__paragraph-text {
     font-size: 18px;
