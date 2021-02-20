@@ -8,6 +8,11 @@
         z-index: 3;
     }
     &__form {
+        padding: 40px 50px 60px;
+        overflow-y: auto;
+       
+    }
+    &__overflow {
         position: fixed;
         max-width: 90%;
         max-height: 90%;
@@ -16,10 +21,6 @@
         transform: translate(-50%, -50%);
         background-color: #ffffff;
         display: flex;
-    }
-    &__overflow {
-        padding: 40px 50px 60px;
-        overflow-y: auto;
     }
     &__close {
         position: absolute;
@@ -119,19 +120,60 @@
     &__item {
         width: 22%;
     }
-    &__submit {
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 42px;
-        color: #686868;
-        margin-top: 40px;
-        width: 100%;
-        height: 66px;
-        background: #FFFFFF;
-        border: 1px solid #F8F8F8;
-        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
-        border-radius: 33px;
-        cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .address {
+        &__overflow {
+            width: 70%;
+        }
+        &__form {
+            padding: 30px;
+            &_profile {
+                padding: 15px;
+            }
+        }
+        &__label {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .address {
+        &__wrapper {
+            flex-wrap: wrap;
+            &_default {
+                flex-wrap: nowrap; 
+            }
+        }
+        &__item {
+            width: 45%;
+        }
+        &__list {
+            &-choise {
+                font-size: 15px;
+            }
+        }
+        &__input {
+            padding: 10px;
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+        &__label {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .address {
+        &__overflow {
+            width: 90%;
+        }
+        &__form {
+            padding: 20px;
+        }
     }
 }

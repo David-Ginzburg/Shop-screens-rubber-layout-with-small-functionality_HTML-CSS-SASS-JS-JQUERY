@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addressForm.style.display="none"
     })
 
-    /* Check all items*/
+    /* check all items*/
 
     const checkAll = document.querySelector('.checkbox_header')
     const checkAllButton = document.querySelector('.purchase__header-select')
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkAll.addEventListener('click', checkItems)
     checkAllButton.addEventListener('click', checkItems)
 
-    /* Delete items */
+    /* delete items */
 
     const items = document.querySelectorAll('.purchase__table-row')
     const deleteButton = document.querySelector('.purchase__header-delete')

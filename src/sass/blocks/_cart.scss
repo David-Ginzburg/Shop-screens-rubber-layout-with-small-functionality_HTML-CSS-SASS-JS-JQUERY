@@ -1,5 +1,6 @@
 .cart {
     padding: 50px;
+    margin: 0 auto;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -7,5 +8,22 @@
     &__main {
         width: 70%;
         margin-right: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cart {
+        &__main {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cart {
+        padding: 25px;
+        &__wrapper {
+            flex-direction: column;
+        }
     }
 }

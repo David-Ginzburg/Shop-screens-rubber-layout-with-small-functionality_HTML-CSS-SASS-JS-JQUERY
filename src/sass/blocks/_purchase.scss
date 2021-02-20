@@ -1,4 +1,3 @@
-
 .purchase {
     &__wrapper {
         margin-left: 50px;
@@ -34,25 +33,34 @@
             }
         }
         &-select {
-            min-width: 100px;
+            min-width: fit-content;
             margin-right: 44px;
             font-weight: 500;
             font-size: 14px;
             line-height: 16px;
             border: none;
-            background-color: #ffffff;
             cursor: pointer;
         }
         &-delete {
-            min-width: 160px;
+            min-width: fit-content;
             margin-right: 17px;
             font-weight: 500;
             font-size: 14px;
             line-height: 16px;
             border: none;
-            background-color: #ffffff;
             color: #F43232;
             cursor: pointer;
+        }
+        &-toChart {
+            min-width: 160px;
+            margin-right: 17px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            border: none;
+            background-color: #ffffff;
+            cursor: pointer;
+            text-decoration-line: underline;
         }
         &-text {
             margin-left: auto;
@@ -61,6 +69,7 @@
             font-size: 22px;
             line-height: 26px;
             &_medium {
+                font-size: 1em;
                 font-weight: 500;
             }
         }
@@ -109,7 +118,7 @@
             &-wrapper {
                 display: flex;
                 align-items: center;
-                padding-right: 15px;
+                padding-right: 0.5vw;
             }
             &-img {
                 margin: 27px 29px 27px 19px;
@@ -183,7 +192,6 @@
                 color: rgba(0, 0, 0, 0.5);
             }
             &-counter {
-                width: 123px;
                 margin: 0 auto;
                 display: flex;
                 justify-content: center;
@@ -220,6 +228,10 @@
                 font-size: 22px;
                 line-height: 26px;
                 color: rgba(0, 0, 0, 0.8);
+                &_profile {
+                    border-top: none;
+                    border-bottom: none;
+                }
             }
             &-plus {
                 position: relative;
@@ -264,7 +276,7 @@
                 }
             }
             &-figure {
-                min-width: 130px;
+                min-width: fit-content;
                 font-family: 'Roboto Condensed', sans-serif;
                 font-weight: 400;
                 font-size: 25px;
@@ -297,6 +309,173 @@
             line-height: 26px;
             &_medium {
                 font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .purchase {
+        &__wrapper {
+            margin-left: 0;
+        }
+        &__header {
+            &-text {
+                font-size: 14px;
+            }
+        }
+        &__footer {
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .purchase {
+        &__table {
+            &-sum {
+                font-size: 20px;
+                &_checkout {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    th, tr, td, tbody {
+        display: block;
+    }
+    .purchase {
+        &__header {
+            flex-wrap: wrap-reverse;
+            &-text {
+                display: none;
+                &_profile {
+                    display: block;
+                }
+            }
+            &-toChart {
+                margin-right: 0;
+                font-size: 0.6rem;
+            }
+            &-delete {
+                margin-right: 0;
+            }
+        }
+        &__table {
+            display: block;
+            &-header {
+                display: none;
+            }
+            &-row {
+                position: relative;
+                border-top: 1px solid rgba(0, 0, 0, 0.2);
+                display: flex;
+                align-items: stretch;
+                flex-direction: column;
+                &_checkout {
+                    border-top: none;
+                    min-height: auto;
+                    height: auto;
+                }
+            }
+            &-check {
+                position: absolute;
+                left: 0px;
+                top: 50px;
+                &_checkout {
+                    border-top: none;
+                }
+            }
+            &-name {
+                border-top: none;
+                padding-left: 50px;
+                &-wrapper {
+                    justify-content: space-between;
+                }
+                &-img {
+                    margin: 20px;
+                }
+                &-text {
+                    align-items: flex-end;
+                    text-align: right;
+                }
+            }
+            &-price {
+                border-top: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &-text {
+                    display: block;
+                }
+                &-wrapper {
+                    margin: unset;
+                }
+            }
+            &-count {
+                margin-top: 12px;
+                border-top: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &-text {
+                    display: block;
+                }
+                &-counter {
+                    margin: unset;
+                    &_profile {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+            &-sum {
+                margin-top: 24px;
+                margin-bottom: 28px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &-text {
+                    display: block;
+                    &_checkout {
+                        display: block;
+                    }
+                }
+                &_checkout {
+                    border-top: none;
+                    margin: 0;
+                }
+            }
+        }
+        &__footer {
+            &-text {
+                margin-top: 31px;
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .purchase {
+        &__header {
+            &-select {
+                margin-right: 3vw;
+                font-size: 12px;
+            }
+            &-delete {
+                font-size: 12px;
+            }
+        }
+        &__table {
+            &-name {
+                &-img {
+                    margin: 5px;
+                }
             }
         }
     }

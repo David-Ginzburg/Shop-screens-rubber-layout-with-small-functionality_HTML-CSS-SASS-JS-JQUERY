@@ -14,21 +14,6 @@
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
             border: none;
         }
-        &-submit {
-            font-family: 'M PLUS Rounded 1c', sans-serif;
-            font-weight: 700;
-            font-size: 28px;
-            line-height: 42px;
-            color: #686868;
-            margin-top: 40px;
-            width: 100%;
-            height: 66px;
-            background: #FFFFFF;
-            border: 1px solid #F8F8F8;
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
-            border-radius: 33px;
-            cursor: pointer;
-        }
     }
     &__block {
         min-height: 32px;
@@ -73,5 +58,35 @@
     }
     &__divider {
         margin-top: 58px;
+    }
+}
+
+@media (max-width: 992px) {
+    .prize {
+        display: none;
+    }
+    .order {
+        margin-top: 50px;
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-bottom: -30px;
+        &__form {
+            padding: 30px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .order {
+        min-width: auto;
+        &__form {
+            padding: 20px;
+            &-input {
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+        &__adress {
+            width: 100%;
+        }
     }
 }

@@ -25,13 +25,35 @@
     &_header {
         margin-right: 17px;
     }
+    &_row {
+        margin-right: 17px;
+    }
     &_table {
-        margin-right: 35px;
+        margin-right: 1.5vw;
     }
     &_policy {
         margin-right: 26px;
     }
     &_default {
         margin-right: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkbox {
+        &_table {
+            margin-right: 5px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .checkbox {
+        &_header {
+            margin-right: 3vw;
+        }
+        &_row {
+            margin-right: 3vw;
+        }
     }
 }

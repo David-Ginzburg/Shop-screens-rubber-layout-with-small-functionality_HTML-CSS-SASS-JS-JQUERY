@@ -1,0 +1,514 @@
+.SelectItemDiv1,.SelectItemDiv2,.SelectItemDiv3,.SelectItemDiv4,.SelectItemDiv5,.SelectItemDiv6,.SelectItemDiv0111,.SelectItemDiv211,.SelectItemDiv311{
+	/* Карточка товара */
+	display:inline-block;
+	position: relative;
+	width: 17.004vw;
+	height: 28.34vw;
+	top:0px;
+	background: #FFFFFF;
+    margin-top: 1em;
+}
+
+.productWraper{
+	/* Карточка товара */
+	display:block;
+	position: absolute;
+	width: 17.004vw;
+	height: 28.34vw;
+	top:0px;
+	background: #FFFFFF;
+}
+
+.productWraper:hover .Rectangle4{
+	display:inline-block;
+}
+
+.productWraper:hover {
+	z-index: 5;
+	position:absolute;
+	width: 17.16vw;
+	height: 29.34vw;
+	border: 0.052vw solid rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	box-shadow: 0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+	transition: height 0.2s ease-out;
+}
+
+.Rectangle4{
+	/* Rectangle 4 */
+	cursor: pointer; 
+	position: absolute;
+	width: 14.04vw;
+	height: 2.86vw;
+	left: 1.508vw;
+	top: 29.64vw;
+	display:none;
+	background: linear-gradient(180deg, #BAA168 0%, #E9DFAE 53.7%, #B49960 100%);
+	box-sizing: border-box;
+	box-shadow: 0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+	transition: background 0.4s ease-out;
+}
+.Rectangle4:hover .Rectangle4Text{
+	display:block;
+	color: #0056b3;
+}
+.Rectangle4Text{
+	/* В корзину */
+	cursor: pointer; 
+	display:none;
+	position: absolute;
+	width: 7.748vw;
+	height: 2.028vw;
+	left: 3.52vw;
+	top:0.416vw;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.352vw;
+	line-height: 2.028vw;
+	/* identical to box height */
+
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.1em;
+
+	color: #FFFFFF;
+	text-shadow: 0px 0.208vw 0.208vw rgba(0, 0, 0, 0.4);
+}
+.ImageFrame{
+	/* Frame 3 */
+	position: absolute;
+	width: 17.056vw;
+	height: 16.952vw;
+	left: 0px;
+	top: 0px;
+	display:block;
+	background: #F1F1F1;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.Img1{
+	/* изображение 3 */
+	display:block;
+	position: absolute;
+	width: 12.2954vw;
+	height: 13.52vw;
+	left: 2.392vw;
+	top: 1.716vw;
+	background-image: url(./img/BioEX.svg);
+	background-size: contain;
+	background-repeat:no-repeat;
+}
+.Img2{
+	/* изображение 4 */
+	display:block;
+	position: absolute;
+	width: 13.11128vw;
+	height: 13.52vw;
+	left: 1.976vw;
+	top: 1.716vw;
+	background-image: url(./img/makeup_plate.svg);
+	background-size: contain;
+	background-repeat:no-repeat;
+}
+.Img3{
+	/* Картинка товара */
+	display:block;
+	position: absolute;
+	width: 14.39984vw;
+	height: 12.48vw;
+	left: 1.352vw;
+	top: 2.236vw;
+	background-image: url("/img/perfume.svg");
+	background-size: contain;
+	background-repeat:no-repeat;
+}
+.smallText1{
+	/* АНТИВОЗРАСТНАЯ ПЕНКА ДЛЯ УМЫВАНИЯ С ПЕПТИДАМИ */
+	position: absolute;
+	width: 14.976vw;
+	height: 1.872vw;
+	right: 0.56vw;
+	top: 17.472vw;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 900;
+	font-size: 0.624vw;
+	line-height: 0.936vw;
+	display: block;
+	align-items: right;
+	text-align: right;
+	letter-spacing: 0.15em;
+
+	color: #000000;
+	
+}
+.mediumText1{
+	/* Tony Moly BIO EX Cell Peptide Foam Cleanser */
+	position: absolute;
+	width: 15.548vw;
+	height: 3.848vw;
+	right: 0.56vw;
+	top: 19.344vw;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.248vw;
+	line-height: 1.56vw;
+	/* or 125% */
+
+	display: block;
+	align-items: center;
+	text-align: right;
+	letter-spacing: -0.05em;
+
+	color: #000000;
+}
+s{
+	margin-left:1.04vw;
+	color: #00000073;
+    letter-spacing: -0.05em;
+}
+.priceText{
+	/* 2 400 ₽ 3 000 ₽ */
+	position: absolute;
+	width: 10.4vw;
+	height: 1.404vw;
+	right: 0.56vw;
+	top: 23.816vw;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.456vw;
+	line-height: 1.716vw;
+	display: block;
+	align-items: center;
+	text-align: right;
+	letter-spacing: -0.05em;
+
+	color: #000000;
+
+}
+.starsRating{
+	/* 429 */
+	position: absolute;
+	width: 3.12vw;
+	height: 2.028vw;
+	right: 0.56vw;
+	top: 26.208vw;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 1.248vw;
+	line-height: 1.872vw;
+	display: block;
+	align-items: right;
+	text-align: right;
+	letter-spacing: -0.06em;
+
+	color: #000000;
+}
+.WishlistHeart,.WishlistHeartSelected{
+	cursor: pointer; 
+	top: 0.832vw;
+	left: 1.04vw;
+	height: 1.716vw;
+    width: 2.08vw;
+    background-repeat: no-repeat;
+	position: absolute;
+	background-size: contain;
+	
+}
+.WishlistHeart{background-image: url('../icons/heart.svg')}
+.WishlistHeartSelected{background-image: url('../icons/selected_heart.svg');}
+.DiscountOffer{
+	/* Vector */
+	position: absolute;
+	width: 4.16vw;
+	height: 1.768vw;
+	right: 0.56vw;
+	top: 0.66vw;
+	border-radius: 1.3vw;
+	background: #FFFFFF;
+	mix-blend-mode: normal;
+	filter: drop-shadow(0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25));
+}
+.DiscountOfferText{
+	background-image: url('../icons/20p.svg');
+    background-repeat: no-repeat;
+	position: absolute;
+	width: 3.12vw;
+	height: 0.988vw;
+	align-items:center;
+	top: 0.364vw;
+    left: 0.52vw;
+	background-size: contain;
+}
+/* Rating module start here */
+.rate {
+	position: absolute;
+	width:9.633vw;
+    height: 1.67232vw;
+	top: 26.3vw;
+	right:20%;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+	display:none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1.864vw;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:1.56vw;
+    color:#ccc0;
+}
+.rate:not(:checked) > label::before {
+    content: url('../icons/star1.svg');
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+	content: url('/icons/star2.svg');
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+@media only screen and (max-width: 1600px){
+	.rate:not(:checked) > label::before {
+        content: url('../icons/star29.svg');
+    }
+    .rate > input:checked ~ label {
+        color: #ffc700;    
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        content: url('../icons/star29f.svg');
+    }
+}
+
+@media only screen and (max-width: 1300px){
+	.rate:not(:checked) > label::before {
+    content: url('../icons/star23.svg');
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        content: url('../icons/star23f.svg');
+    }
+}
+
+@media only screen and (max-width: 1000px){
+	
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media only screen and (max-width: 768px){
+    .SelectItemDiv1,.SelectItemDiv2,.SelectItemDiv3,.SelectItemDiv4,.SelectItemDiv5,.SelectItemDiv6{
+        /* Карточка товара */
+        position: relative;
+        display:inline-block;
+        width: 90%;
+        height: calc(2.61*28.34vw);
+        top:0px;
+        background: #FFFFFF;
+        margin-top: 2em;
+    }
+
+    .productWraper{
+        width: 100%;
+        height: calc(2.61*28.34vw);
+    }
+    
+    .productWraper:hover {
+        width: 100%;
+        height: calc(2.61*29.34vw);
+        border: 0.052vw solid rgba(0, 0, 0, 0.5);
+        box-shadow: 0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+    }
+    
+    .Rectangle4{
+        /* Rectangle 4 */
+        width: calc(2.61*14.04vw);
+        height: calc(2.61*2.86vw);
+        left: calc(2.61*1.508vw);
+        top: calc(2.61*29.64vw);
+        box-shadow: 0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+    }
+    .Rectangle4Text{
+        /* В корзину */
+        width: calc(2.61*7.748vw);
+        height: calc(2.61*2.028vw);
+        left: calc(2.61*3.12vw);
+        top:calc(2.61*0.416vw);
+
+        font-size: calc(2.61*1.352vw);
+        line-height: calc(2.61*2.028vw);
+        /* identical to box height */
+    
+        text-shadow: 0px 0.208vw 0.208vw rgba(0, 0, 0, 0.4);
+    }
+    .ImageFrame{
+        /* Frame 3 */
+        width: 100%;
+        height: calc(2.61*16.952vw);
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .Img1{
+        /* изображение 3 */
+        width: calc(2.61*12.2954vw);
+        height: calc(2.61*13.52vw);
+        left: calc(2.61*2.392vw);
+        top: calc(2.61*1.716vw);
+    }
+    .Img2{
+        /* изображение 4 */
+        width: calc(2.61*13.11128vw);
+        height: calc(2.61*13.52vw);
+        left: calc(2.61*1.976vw);
+        top: calc(2.61*1.716vw);
+    
+    }
+    .Img3{
+        /* Картинка товара */
+        width: calc(2.61*14.39984vw);
+        height: calc(2.61*12.48vw);
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(2.61*2.236vw);
+    }
+    .smallText1{
+        /* АНТИВОЗРАСТНАЯ ПЕНКА ДЛЯ УМЫВАНИЯ С ПЕПТИДАМИ */
+        width: calc(2.61*14.976vw);
+        height: calc(2.61*1.872vw);
+        right: 0.56vw;
+        top: calc(2.61*17.472vw);
+    
+        font-size: calc(2.61*0.624vw);
+        line-height: calc(2.61*0.936vw);
+        display: block;
+        align-items: right;
+        text-align: right;
+        letter-spacing: 0.15em;
+    }
+    .mediumText1{
+        /* Tony Moly BIO EX Cell Peptide Foam Cleanser */
+        width: calc(2.61*15.548vw);
+        height: calc(2.61*3.848vw);
+        right: 0.56vw;
+        top: calc(2.61*19.344vw);
+    
+        font-size: calc(2.61*1.248vw);
+        line-height: calc(2.61*1.56vw);
+        /* or 125% */
+    
+        display: block;
+        align-items: center;
+        text-align: right;
+        letter-spacing: -0.05em;
+    
+        color: #000000;
+    }
+    s{
+        margin-left:1.04vw;
+        color: #00000073;
+    }
+    .priceText{
+        /* 2 400 ₽ 3 000 ₽ */
+        position: absolute;
+        width: calc(2.61*10.4vw);
+        height: calc(2.61*1.404vw);
+        right: 0.56vw;
+        top: calc(2.61*23.816vw);
+    
+        font-size: calc(2.61*1.456vw);
+        line-height: calc(2.61*1.716vw);
+        display: block;
+        align-items: right;
+        text-align: right;
+        letter-spacing: -0.05em;
+    }
+    .starsRating{
+        /* 429 */
+        width: calc(2.61*3.12vw);
+        height: calc(2.61*2.028vw);
+        right:0.56vw;
+        top: calc(2.61*26.208vw);
+    
+        font-size: calc(2.61*1.248vw);
+        line-height: calc(2.61*1.872vw);
+        display: block;
+        align-items: right;
+        text-align: right;
+        letter-spacing: -0.06em;
+    
+        color: #000000;
+    }
+    .WishlistHeart,.WishlistHeartSelected{
+        top: 2.832vw;
+        left: 2.04vw;
+        height: calc(2.61*1.716vw);
+        width: calc(2.61*2.08vw);
+        
+    }
+    .DiscountOffer{
+        /* Vector */
+        width: calc(2.5*4.16vw);
+        height: calc(2.5*1.768vw);
+        top: 2.832vw;
+        right: 2.04vw;
+        border-radius: 3.3vw;
+        mix-blend-mode: normal;
+        filter: drop-shadow(0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25));
+    }
+    .DiscountOfferText{
+        width: calc(2.4*3.12vw);
+        height: calc(2.4*0.988vw);
+        align-items:center;
+        top: calc(2.61*0.364vw);
+        left: calc(2.61*0.52vw);
+    }
+    /* Rating module start here */
+    .rate {
+        position: absolute;
+        width:calc(2.06*9.633vw);
+        height: calc(2.61*1.67232vw);
+        top: calc(2.61*26.4vw);
+        right:20%;
+    }
+    .rate:not(:checked) > label {
+        width:calc(2.06*1.864vw);
+        font-size:calc(2.61*1.56vw);
+    }
+}
+
+@media (max-width: 576px) {
+    .rate:not(:checked) > label::before {
+        content: url('../icons/star1s.svg');
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        content: url('../icons/star2s.svg');
+    }
+}
