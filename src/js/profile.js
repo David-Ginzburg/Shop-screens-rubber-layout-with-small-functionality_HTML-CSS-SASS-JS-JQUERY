@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    /* purchase carousel */
+    /* purchase pagination */
     
     const purchaseShowButton = document.querySelector('.profile__block-header_purchase .profile__block-header-show')
     const purchaseHideButton = document.querySelector('.profile__block-header_purchase .profile__block-header-hide')
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             checkWindowWidth()
     })
 
-    /* favorite carousels */
+    /* favorite pagination */
 
     const favoriteItems = document.querySelector('.profile__favorites_raw').childNodes
 
@@ -207,11 +207,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkWindowWidth()
 
-    /* favorite carousel show/hide all */
+    /* favorite pagination show/hide all */
 
     const favoriteShowButton = document.querySelector('.profile__block-header_favorites .profile__block-header-show')
     const favoriteHideButton = document.querySelector('.profile__block-header_favorites .profile__block-header-hide')
     const favoriteCarouse = document.querySelector('.profile__block-header_favorites .profile__carousel_favorites')
+    const rightArrows = document.querySelectorAll('.arrowRight')
+    const leftArrows = document.querySelectorAll('.arrowLeft')
+
+    const hideFakePaginationButtons = () => {
+        rightArrows.forEach(item => {
+            item.style.display="none"
+        })
+        leftArrows.forEach(item => {
+            item.style.display="none"
+        })
+    }
+
+    const showFakePaginationButtons = () => {
+        rightArrows.forEach(item => {
+            item.style.display="block"
+        })
+        leftArrows.forEach(item => {
+            item.style.display="block"
+        })
+    }
 
     favoriteHideButton.style.display = "none"
 
@@ -219,6 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         favoriteHideButton.style.display = "block"
         favoriteCarouse.style.display = "none"
         favoriteShowButton.style.display = "none"
+        hideFakePaginationButtons()
         showFavoriteItems(1000)
         $('.profile__carousel_favorites').pagination('destroy')
     })
@@ -227,10 +248,11 @@ document.addEventListener('DOMContentLoaded', () => {
         favoriteHideButton.style.display = "none"
         favoriteCarouse.style.display = "flex"
         favoriteShowButton.style.display = "block"
+        showFakePaginationButtons()
         checkWindowWidth()
     })
 
-    /* addresses */
+    /* addresses delete */
 
     const addresses = document.querySelectorAll('.address__list-item')
     const arddressDeleteButton = document.querySelectorAll('.address__list-choise-delete')
@@ -240,4 +262,10 @@ document.addEventListener('DOMContentLoaded', () => {
             addresses[index].remove()
         })
     })
+    
+    /* bind fake item arrows to pagination */
+
+    $('.profile__favorites').on( "click", '.arrowRight', function(e){
+        $('.paginationjs-next').trigger(e.type);
+    });
 });

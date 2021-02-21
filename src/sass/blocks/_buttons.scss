@@ -13,15 +13,20 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 33px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &_profile {
         font-size: 1rem;
     }
     &_delete {
+        font-size: 1.35vw;
         background-color: #FF0000;
         color: #FFFFFF;
         width: fit-content;
         padding: 20px;
         line-height: 1.4rem;
+        width: 75%;
     }
 }
 
@@ -31,7 +36,7 @@
             font-size: 0.8rem;
         }
         &_delete {
-            font-size: 2vw;
+            font-size: 1.3vw;
         }
     }
 }
@@ -67,9 +72,10 @@
 
 @media (max-width: 576px) {
     .button {
-        font-size: 3.5vw;
+        font-size: 4.8vw;
+        line-height: 6vw;
         &_delete {
-            font-size: 4.3vw;
+            width: 100%;
         }
     }
 }
