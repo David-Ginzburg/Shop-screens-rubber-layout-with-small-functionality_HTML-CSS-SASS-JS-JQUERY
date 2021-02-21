@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    /* small menu */
+    /* menu */
 
     const profileBlocks = document.querySelectorAll('.profile__block')
     const menuItems = document.querySelectorAll('.profile__menu-list .profile__menu-item_big')
@@ -78,11 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             menuItems.forEach(item => {
                 item.classList.remove('profile__menu-item_big_active')
-                menuSmallItems[index].classList.remove('profile__menu-item_small_active')
+                menuSmallItems.forEach(item => {
+                    item.classList.remove('profile__menu-item_small_active')
+                })
                 hideBlock(index)
             })
-            menuSmallItems[index].classList.add('profile__menu-item_small_active')
             item.classList.add('profile__menu-item_big_active')
+            menuSmallItems[index].classList.add('profile__menu-item_small_active')
             showBlock(index)
         })
     })
@@ -97,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuSmallItems.forEach(item => {
                     item.classList.remove('profile__menu-item_small_active')
                 })
+                menuItems.forEach(item => {
+                    item.classList.remove('profile__menu-item_big_active')
+                })
+                menuItems[index].classList.add('profile__menu-item_big_active')
                 showBlock(index)
                 item.classList.add('profile__menu-item_small_active')
             }
@@ -105,20 +111,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* delete favorities */
 
-    const items = document.querySelectorAll('.SelectItemDiv3')
-    const hearts = document.querySelectorAll('.WishlistHeartSelected')
-
-    hearts.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            items[index].remove()
+    const addEventFavorites = () => {
+        const items = document.querySelectorAll('.SelectItemDiv3')
+        const hearts = document.querySelectorAll('.WishlistHeartSelected')
+        hearts.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                items[index].remove()
+            })
         })
-    })
+    }
 
     /* purchase carousel */
-
+    
     const purchaseShowButton = document.querySelector('.profile__block-header_purchase .profile__block-header-show')
     const purchaseHideButton = document.querySelector('.profile__block-header_purchase .profile__block-header-hide')
     const purchaseCarousel = document.querySelector('.profile__block-header_purchase .profile__carousel')
+    const purchaseItemsRaw = document.querySelector('.purchase_raw').childNodes
+
+    function layouting(data) {
+        let dataHtml = ''
+              $.each(data, function (index, item) {
+                dataHtml += item.outerHTML
+              })
+        return dataHtml;
+    }
+
+    const showPurchaseItems = (perPage) => {
+        $('.profile__carousel_purchase').pagination({
+            dataSource: Array.from(purchaseItemsRaw),
+            pageRange: 1,
+            pageSize: perPage,
+            showPageNumbers: true,
+            showPrevious: true,
+            showNext: true,
+            showFirstOnEllipsisShow: true,
+            showLastOnEllipsisShow: true,
+            callback: function(data, pagination) {
+                var html = layouting(data);
+                $('.purchase').html(html);
+            }
+        })
+    }
 
     purchaseHideButton.style.display = "none"
 
@@ -126,143 +159,85 @@ document.addEventListener('DOMContentLoaded', () => {
             purchaseHideButton.style.display = "block"
             purchaseCarousel.style.display = "none"
             purchaseShowButton.style.display = "none"
-            purchaseItems.forEach(item => item.style.display="block")
+            showPurchaseItems(1000)
+            $('.profile__carousel_purchase').pagination('destroy')
     })
 
     purchaseHideButton.addEventListener('click', () => {
             purchaseHideButton.style.display = "none"
             purchaseCarousel.style.display = "flex"
             purchaseShowButton.style.display = "block"
-            hideAllBlocks()
-            purchaseItems[purchaseBlocksIndex].style.display="block"
+            checkWindowWidth()
     })
 
-    /* switch blocks */
+    /* favorite carousels */
 
-    const purchaseRightArrow = document.querySelector('.profile__carousel_purchase .profile__carousel-right-arrow')
-    const purchaseLeftArrow = document.querySelector('.profile__carousel_purchase .profile__carousel-left-arrow')
-    const purchaseCarouseelFiguries = document.querySelectorAll('.profile__carousel_purchase .profile__carousel-figure')
-    
-    let purchaseBlocksIndex = 0
+    const favoriteItems = document.querySelector('.profile__favorites_raw').childNodes
 
-        /* show first block */
-
-    purchaseItems.forEach((item, index) => {
-        if (index !== 0) {
-            item.style.display="none"
-        }
-        purchaseCarouseelFiguries[0].classList.add('profile__carousel-figure_active')
-    })
-
-        /* hide all blocks */
-
-    const hideAllBlocks = () => {purchaseItems.forEach(item => item.style.display="none")}
-    const removeAllActiveFigures = () => {purchaseCarouseelFiguries.forEach(item => item.classList.remove('profile__carousel-figure_active'))}
-
-    purchaseRightArrow.addEventListener('click', () => {
-        if (purchaseBlocksIndex < purchaseItems.length - 1) {
-            purchaseBlocksIndex++
-            hideAllBlocks()
-            removeAllActiveFigures()
-            purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
-            purchaseItems[purchaseBlocksIndex].style.display="block"
-        }
-    })
-
-    purchaseLeftArrow.addEventListener('click', () => {
-        if (purchaseBlocksIndex > 0) {
-            purchaseBlocksIndex--
-            hideAllBlocks()
-            removeAllActiveFigures()
-            purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
-            purchaseItems[purchaseBlocksIndex].style.display="block"
-        }
-    })
-
-    purchaseCarouseelFiguries.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            hideAllBlocks()
-            removeAllActiveFigures()
-            purchaseBlocksIndex = index
-            purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
-            purchaseItems[purchaseBlocksIndex].style.display="block"
+    const showFavoriteItems = (perPage) => {
+        $('.profile__carousel_favorites').pagination({
+            dataSource: Array.from(favoriteItems),
+            pageRange: 1,
+            pageSize: perPage,
+            showPageNumbers: true,
+            showPrevious: true,
+            showNext: true,
+            showFirstOnEllipsisShow: true,
+            showLastOnEllipsisShow: true,
+            callback: function(data, pagination) {
+                var html = layouting(data);
+                $('.profile__favorites').html(html);
+            }
         })
-    })
+        $('.profile__carousel_favorites').addHook('afterPaging', addEventFavorites)
+        addEventFavorites()
+    }
 
+    const checkWindowWidth = () => {
+        if (window.innerWidth > 768) {
+            showFavoriteItems(3)
+            showPurchaseItems(1)
+        } else {
+            showFavoriteItems(1)
+            showPurchaseItems(1)
+        }
+    }
 
-    /* favorite carousel */
+    window.addEventListener('resize', checkWindowWidth)
+
+    checkWindowWidth()
+
+    /* favorite carousel show/hide all */
 
     const favoriteShowButton = document.querySelector('.profile__block-header_favorites .profile__block-header-show')
     const favoriteHideButton = document.querySelector('.profile__block-header_favorites .profile__block-header-hide')
-    const favoriteCarousel = document.querySelector('.profile__block-header_favorites .profile__carousel')
+    const favoriteCarouse = document.querySelector('.profile__block-header_favorites .profile__carousel_favorites')
 
     favoriteHideButton.style.display = "none"
 
     favoriteShowButton.addEventListener('click', () => {
         favoriteHideButton.style.display = "block"
-        favoriteCarousel.style.display = "none"
+        favoriteCarouse.style.display = "none"
         favoriteShowButton.style.display = "none"
-        // purchaseItems.forEach(item => item.style.display="block")
+        showFavoriteItems(1000)
+        $('.profile__carousel_favorites').pagination('destroy')
     })
 
     favoriteHideButton.addEventListener('click', () => {
         favoriteHideButton.style.display = "none"
-        favoriteCarousel.style.display = "flex"
+        favoriteCarouse.style.display = "flex"
         favoriteShowButton.style.display = "block"
-        // hideAllBlocks()
-        // purchaseItems[purchaseBlocksIndex].style.display="block"
+        checkWindowWidth()
     })
 
-    /* switch blocks */
+    /* addresses */
 
-    const favoriteRightArrow = document.querySelector('.profile__carousel_favorite .profile__carousel-right-arrow')
-    const favoriteLeftArrow = document.querySelector('.profile__carousel_favorite .profile__carousel-left-arrow')
-    const favoriteCarouseelFiguries = document.querySelectorAll('.profile__carousel_favorite .profile__carousel-figure')
-    const favoriteItems = document.querySelector('.profile__favorites').childNodes
-
-    let favoriteBlocksIndex = 0
-
-        /* show first block */
-
-    // purchaseItems.forEach((item, index) => {
-    //     if (index !== 0) {
-    //         item.style.display="none"
-    //     }
-    //     purchaseCarouseelFiguries[0].classList.add('profile__carousel-figure_active')
-    // })
-
-    //     /* hide all blocks */
-
-    // const hideAllBlocks = () => {purchaseItems.forEach(item => item.style.display="none")}
-    // const removeAllActiveFigures = () => {purchaseCarouseelFiguries.forEach(item => item.classList.remove('profile__carousel-figure_active'))}
-
-    // purchaseRightArrow.addEventListener('click', () => {
-    //     if (purchaseBlocksIndex < purchaseItems.length - 1) {
-    //         purchaseBlocksIndex++
-    //         hideAllBlocks()
-    //         removeAllActiveFigures()
-    //         purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
-    //         purchaseItems[purchaseBlocksIndex].style.display="block"
-    //     }
-    // })
-
-    // purchaseLeftArrow.addEventListener('click', () => {
-    //     if (purchaseBlocksIndex > 0) {
-    //         purchaseBlocksIndex--
-    //         hideAllBlocks()
-    //         removeAllActiveFigures()
-    //         purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
-    //         purchaseItems[purchaseBlocksIndex].style.display="block"
-    //     }
-    // })
-
-    // purchaseCarouseelFiguries.forEach((item, index) => {
-    //     item.addEventListener('click', () => {
-    //         hideAllBlocks()
-    //         removeAllActiveFigures()
-    //         purchaseBlocksIndex = index
-    //         purchaseCarouseelFiguries[purchaseBlocksIndex].classList.add('profile__carousel-figure_active')
-    //         purchaseItems[purchaseBlocksIndex].style.display="block"
-    //     })
-    // })
+    const addresses = document.querySelectorAll('.address__list-item')
+    const arddressDeleteButton = document.querySelectorAll('.address__list-choise-delete')
+    
+    arddressDeleteButton.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            addresses[index].remove()
+        })
+    })
 });

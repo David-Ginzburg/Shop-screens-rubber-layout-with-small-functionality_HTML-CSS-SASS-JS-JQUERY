@@ -18,12 +18,14 @@
             font-size: 1.4vw;
             line-height: 3rem;
             cursor: pointer;
-            &_active {
-                text-decoration: underline;
-            }
-            &:hover {
-                text-decoration: underline;
-            }
+            &_big {
+                &_active {
+                    text-decoration: underline;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            } 
             &_small {
                 position: relative;
                 display: none;
@@ -81,11 +83,6 @@
                 color: #000000;
             }
         }
-        &_favorites {
-            &_items {
-                display: none;
-            }
-        }
     }
     &__blocks {
         width: 70%;
@@ -106,7 +103,22 @@
                 line-height: 1.4rem;
                 cursor: pointer;
                 text-decoration: underline;
+                justify-self: flex-end;
             }
+        }
+        &-carousel {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-grow: 1;
+        }
+    }
+    &__text {
+        margin-top: 1em;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        &_link {
+            color: #000000;
         }
     }
     &-settings {
@@ -155,6 +167,10 @@
     &__favorites {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        &_raw {
+            display: none;
+        }
     }
 }
 
@@ -227,14 +243,9 @@
         &__favorites {
             flex-direction: column;
         }
-        &__carousel {
-            &_favorites {
-                &_blocks {
-                    display: none;
-                }
-                &_items {
-                    display: flex;
-                }
+        &__block {
+            &-carousel {
+                justify-content: space-around;
             }
         }
     }
