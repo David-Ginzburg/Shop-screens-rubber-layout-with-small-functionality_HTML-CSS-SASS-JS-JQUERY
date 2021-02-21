@@ -270,4 +270,15 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.profile__favorites').on( "click", '.arrowLeft', function(e){
         $('.paginationjs-prev').trigger(e.type);
     });
+
+    /* register personal data */
+
+    
+    const registerLink = document.querySelector('.profile__text_link')
+    registerLink.addEventListener('click', (e) => {
+        e.preventDefault()
+        $('body').on( "click", '.profile__text_link', function(e){
+            $('.profile__menu-item_personal').trigger(e.type);
+        });
+    })
 });
