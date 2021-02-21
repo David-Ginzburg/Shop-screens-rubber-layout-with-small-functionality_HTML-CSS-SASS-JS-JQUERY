@@ -818,8 +818,8 @@ s {
     /* Карточка товара */
     position: relative;
     display: inline-block;
-    width: calc(5.1*17.004vw);
-    height: calc(5.1*28.34vw);
+    width: 100%;
+    height: calc(5.1*30.34vw);
     top: 0px;
     background: #FFFFFF;
     margin-top: 2em;
@@ -828,12 +828,12 @@ s {
     margin-right: 0;
   }
   .productWraper {
-    width: calc(5.1*17.004vw);
-    height: calc(5.1*28.34vw);
+    width: 100%;
+    height: calc(5.1*30.34vw);
   }
   .productWraper:hover {
-    width: calc(5.1*17.25vw);
-    height: calc(5.1*33.8vw);
+    width: 100%;
+    height: calc(5.1*35.34vw);
     border: 0.052vw solid rgba(0, 0, 0, 0.5);
     box-shadow: 0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
   }
@@ -860,8 +860,8 @@ s {
   }
   .ImageFrame {
     /* Frame 3 */
-    width: calc(5.1*17.056vw);
-    height: calc(5.1*16.952vw);
+    width: 100%;
+    height: calc(5.1*18.952vw);
   }
   img {
     max-width: 100%;
@@ -913,8 +913,8 @@ s {
     /* АНТИВОЗРАСТНАЯ ПЕНКА ДЛЯ УМЫВАНИЯ С ПЕПТИДАМИ */
     width: calc(5.1*14.976vw);
     height: calc(5.1*1.872vw);
-    right: 0.56vw;
-    top: calc(5.1*17.472vw);
+    right: 2.1vw;
+    top: calc(5.1*19.472vw);
     font-size: calc(5.1*0.624vw);
     line-height: calc(5.1*0.936vw);
     display: block;
@@ -926,8 +926,8 @@ s {
     /* Tony Moly BIO EX Cell Peptide Foam Cleanser */
     width: calc(5.1*15.548vw);
     height: calc(5.1*3.848vw);
-    right: 0.56vw;
-    top: calc(5.1*19.344vw);
+    right: 2.1vw;
+    top: calc(5.1*20.544vw);
     font-size: calc(5.1*1.248vw);
     line-height: calc(5.1*1.56vw);
     /* or 125% */
@@ -948,8 +948,8 @@ s {
     position: absolute;
     width: calc(5.1*10.4vw);
     height: calc(5.1*1.404vw);
-    right: 0.56vw;
-    top: calc(5.1*23.816vw);
+    right: 2.1vw;
+    top: calc(5.1*24.3vw);
     font-size: calc(5.1*1.456vw);
     line-height: calc(5.1*1.716vw);
     display: block;
@@ -961,8 +961,8 @@ s {
     /* 429 */
     width: calc(5.1*3.12vw);
     height: calc(5.1*2.028vw);
-    right: 0.56vw;
-    top: calc(5.1*26.208vw);
+    right: 2.1vw;
+    top: calc(5.1*26.908vw);
     font-size: calc(5.1*1.248vw);
     line-height: calc(5.1*1.872vw);
     display: block;
@@ -972,8 +972,8 @@ s {
     color: #000000;
   }
   .WishlistHeart, .WishlistHeartSelected {
-    top: 2.832vw;
-    left: 2.04vw;
+    top: 3.832vw;
+    left: 4.04vw;
     height: calc(5.1*1.716vw);
     width: calc(5.1*2.08vw);
   }
@@ -981,8 +981,8 @@ s {
     /* Vector */
     width: calc(5.5*4.16vw);
     height: calc(5.5*1.768vw);
-    top: 2.832vw;
-    right: 2.04vw;
+    top: 3.832vw;
+    right: 4.04vw;
     border-radius: 3.3vw;
     mix-blend-mode: normal;
     filter: drop-shadow(0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25));
@@ -997,13 +997,16 @@ s {
   /* Rating module start here */
   .rate {
     position: absolute;
-    width: calc(5.06*9.633vw);
+    width: 70%;
     height: calc(5.1*1.67232vw);
-    top: calc(5.1*26.4vw);
-    right: 20%;
+    top: calc(5.1*27.2vw);
+    right: 15%;
+  }
+  .rate label {
+    margin-right: 0.5em;
   }
   .rate:not(:checked) > label {
-    width: calc(5.06*0.8vw);
+    width: calc(5.06*1.1vw);
     font-size: calc(5.1*0.9vw);
   }
   .rate:not(:checked) > label::before {
@@ -1028,198 +1031,10 @@ s {
 }
 
 @media (max-width: 576px) {
-  .SelectItemDiv1, .SelectItemDiv2, .SelectItemDiv3, .SelectItemDiv4, .SelectItemDiv5, .SelectItemDiv6 {
-    /* Карточка товара */
-    position: relative;
-    display: inline-block;
-    width: calc(5.1*17.004vw);
-    height: calc(5.1*28.34vw);
-    top: 0px;
-    background: #FFFFFF;
-    margin-top: 2em;
-  }
-  .SelectItemDiv3:not(:nth-child(3n)) {
-    margin-right: 0;
-  }
-  .productWraper {
-    width: calc(5.1*17.004vw);
-    height: calc(5.1*28.34vw);
-  }
-  .productWraper:hover {
-    width: calc(5.1*17.25vw);
-    height: calc(5.1*33.8vw);
-    border: 0.052vw solid rgba(0, 0, 0, 0.5);
-    box-shadow: 0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
-  }
-  .Rectangle4 {
-    /* Rectangle 4 */
-    width: calc(5.1*14.04vw);
-    height: calc(5.1*2.86vw);
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(5.1*29.64vw);
-    box-shadow: 0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
-    text-align: center;
-  }
-  .Rectangle4Text {
-    /* В корзину */
-    width: calc(5.1*7.748vw);
-    height: calc(5.1*2.028vw);
-    left: calc(5.1*3.12vw);
-    top: calc(5.1*0.416vw);
-    font-size: calc(5.1*1.352vw);
-    line-height: calc(5.1*2.028vw);
-    /* identical to box height */
-    text-shadow: 0px 0.208vw 0.208vw rgba(0, 0, 0, 0.4);
-  }
-  .ImageFrame {
-    /* Frame 3 */
-    width: calc(5.1*17.056vw);
-    height: calc(5.1*16.952vw);
-  }
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Img1 {
-    /* изображение 3 */
-    width: calc(5.1*12.2954vw);
-    height: calc(5.1*13.52vw);
-    left: calc(5.1*2.392vw);
-    top: calc(5.1*1.716vw);
-  }
-  .Img2 {
-    /* изображение 4 */
-    width: calc(5.1*13.11128vw);
-    height: calc(5.1*13.52vw);
-    left: calc(5.1*1.976vw);
-    top: calc(5.1*1.716vw);
-  }
-  .Img3 {
-    /* Картинка товара */
-    width: calc(5.1*14.39984vw);
-    height: calc(5.1*15.48vw);
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(5.1*2.236vw);
-  }
-  .smallText1 {
-    /* АНТИВОЗРАСТНАЯ ПЕНКА ДЛЯ УМЫВАНИЯ С ПЕПТИДАМИ */
-    width: calc(5.1*14.976vw);
-    height: calc(5.1*1.872vw);
-    right: 0.56vw;
-    top: calc(5.1*17.472vw);
-    font-size: calc(5.1*0.624vw);
-    line-height: calc(5.1*0.936vw);
-    display: block;
-    align-items: right;
-    text-align: right;
-    letter-spacing: 0.15em;
-  }
-  .mediumText1 {
-    /* Tony Moly BIO EX Cell Peptide Foam Cleanser */
-    width: calc(5.1*15.548vw);
-    height: calc(5.1*3.848vw);
-    right: 0.56vw;
-    top: calc(5.1*19.344vw);
-    font-size: calc(5.1*1.248vw);
-    line-height: calc(5.1*1.56vw);
-    /* or 125% */
-    display: block;
-    align-items: center;
-    text-align: right;
-    letter-spacing: -0.05em;
-    color: #000000;
-  }
-  s {
-    margin-left: 1.04vw;
-    color: #00000073;
-    font-size: calc(5.1*1.456vw);
-    line-height: calc(5.1*1.716vw);
-  }
-  .priceText {
-    /* 2 400 ₽ 3 000 ₽ */
-    position: absolute;
-    width: calc(5.1*10.4vw);
-    height: calc(5.1*1.404vw);
-    right: 0.56vw;
-    top: calc(5.1*23.816vw);
-    font-size: calc(5.1*1.456vw);
-    line-height: calc(5.1*1.716vw);
-    display: block;
-    align-items: right;
-    text-align: right;
-    letter-spacing: -0.05em;
-  }
-  .starsRating {
-    /* 429 */
-    width: calc(5.1*3.12vw);
-    height: calc(5.1*2.028vw);
-    right: 0.56vw;
-    top: calc(5.1*26.208vw);
-    font-size: calc(5.1*1.248vw);
-    line-height: calc(5.1*1.872vw);
-    display: block;
-    align-items: right;
-    text-align: right;
-    letter-spacing: -0.06em;
-    color: #000000;
-  }
-  .WishlistHeart, .WishlistHeartSelected {
-    top: 2.832vw;
-    left: 2.04vw;
-    height: calc(5.1*1.716vw);
-    width: calc(5.1*2.08vw);
-  }
-  .DiscountOffer {
-    /* Vector */
-    width: calc(5.5*4.16vw);
-    height: calc(5.5*1.768vw);
-    top: 2.832vw;
-    right: 2.04vw;
-    border-radius: 3.3vw;
-    mix-blend-mode: normal;
-    filter: drop-shadow(0.208vw 0.208vw 0.208vw rgba(0, 0, 0, 0.25));
-  }
-  .DiscountOfferText {
-    width: calc(5.4*3.12vw);
-    height: calc(5.4*0.988vw);
-    align-items: center;
-    top: calc(5.1*0.364vw);
-    left: calc(5.1*0.52vw);
-  }
-  /* Rating module start here */
-  .rate {
-    position: absolute;
-    width: calc(5.06*9.633vw);
-    height: calc(5.1*1.67232vw);
-    top: calc(5.1*26.4vw);
-    right: 20%;
-  }
   .rate:not(:checked) > label {
-    width: calc(5.06*1.864vw);
-    font-size: calc(5.1*1.56vw);
-  }
-  .rate:not(:checked) > label::before {
-    content: url("../icons/star1.svg");
-  }
-  .rate > input:checked ~ label {
-    color: #ffc700;
-    content: url("/icons/star2.svg");
-  }
-  .rate:not(:checked) > label:hover,
-  .rate:not(:checked) > label:hover ~ label {
-    content: url("/icons/star2.svg");
-  }
-  .rate > input:checked + label:hover,
-  .rate > input:checked + label:hover ~ label,
-  .rate > input:checked ~ label:hover,
-  .rate > input:checked ~ label:hover ~ label,
-  .rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
-    content: url("/icons/star2.svg");
+    width: calc(5.06*1.1vw);
+    font-size: calc(5.1*1.3vw);
+    margin-right: 0.2em;
   }
 }
 
@@ -3454,6 +3269,7 @@ s {
   }
   .profile__favorites {
     flex-direction: column;
+    margin: -22px;
   }
   .profile__block-carousel {
     justify-content: space-around;

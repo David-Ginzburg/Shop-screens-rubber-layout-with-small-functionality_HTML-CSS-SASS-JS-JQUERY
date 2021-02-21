@@ -268,4 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.profile__favorites').on( "click", '.arrowRight', function(e){
         $('.paginationjs-next').trigger(e.type);
     });
+
+    $('.profile__favorites').on( "click", '.arrowLeft', function(e){
+        $('.paginationjs-prev').trigger(e.type);
+    });
 });
