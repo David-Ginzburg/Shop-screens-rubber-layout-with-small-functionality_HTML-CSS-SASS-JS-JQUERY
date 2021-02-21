@@ -3285,7 +3285,8 @@ s {
   }
   .profile__favorites {
     flex-direction: column;
-    margin: -22px;
+    margin-left: -5vh;
+    margin-right: -5vh;
   }
   .profile__block-carousel {
     justify-content: space-around;
