@@ -203,8 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    window.addEventListener('resize', checkWindowWidth)
-
     checkWindowWidth()
 
     /* favorite pagination show/hide all */
