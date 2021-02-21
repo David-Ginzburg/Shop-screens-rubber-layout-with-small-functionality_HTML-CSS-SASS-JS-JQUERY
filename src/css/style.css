@@ -1014,11 +1014,11 @@ s {
   }
   .rate > input:checked ~ label {
     color: #ffc700;
-    content: url("/icons/star2.svg");
+    content: url("../icons/star2.svg");
   }
   .rate:not(:checked) > label:hover,
   .rate:not(:checked) > label:hover ~ label {
-    content: url("/icons/star2.svg");
+    content: url("../icons/star2.svg");
   }
   .rate > input:checked + label:hover,
   .rate > input:checked + label:hover ~ label,
@@ -1026,7 +1026,7 @@ s {
   .rate > input:checked ~ label:hover ~ label,
   .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
-    content: url("/icons/star2.svg");
+    content: url("../icons/star2.svg");
   }
 }
 
