@@ -3133,6 +3133,12 @@ s {
   display: none;
 }
 
+.profile__block hr {
+  display: none;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+}
+
 .profile__block_active {
   display: block;
 }
@@ -3290,6 +3296,9 @@ s {
   }
   .profile__block-carousel {
     justify-content: space-around;
+  }
+  .profile__block hr {
+    display: block;
   }
 }
 

@@ -90,6 +90,11 @@
     }
     &__block {
         display: none;
+        hr {
+            display: none;
+            margin-top: 1.6em;
+            margin-bottom: 1.6em;
+        }
         &_active {
             display: block;
         }
@@ -249,6 +254,9 @@
             &-carousel {
                 justify-content: space-around;
             }
+            hr {
+                display: block;
+            }  
         }
     }
 }
