@@ -16,13 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* check all items*/
 
-    const checkAll = document.querySelectorAll('.checkbox_header')
-    const purchaseItems = document.querySelectorAll('.purchase__item')
+    const checkAllSettnigs = document.querySelector('.checkbox_header_settings')
+    const checkAllMailing = document.querySelector('.checkbox_header_mailing')
 
-    function checkAllItems(itemChecker) {
+    const settingsSettingsChecks = document.querySelectorAll('.profile-settings_general .checkbox_row')
+    const settingMailingChecks = document.querySelectorAll('.profile-settings_mailing .checkbox_row')
+
+    function checkAllItems(items) {
         let res = false
-        for (let i = 0; i < itemChecker.length; i++) {
-            if (itemChecker[i].checked) {
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].checked) {
                 res = true
             } else {
                 return false
@@ -31,31 +34,49 @@ document.addEventListener('DOMContentLoaded', () => {
         return res
     }
 
-    function checkItems(index) {
-        let itemChecker = ''
-        if (index >= purchaseItems.length) {
-            itemChecker = index > purchaseItems.length ? document.querySelectorAll('.profile-settings_general .checkbox_row') : document.querySelectorAll('.profile-settings_mailing .checkbox_row')
-        } else {
-            itemChecker = purchaseItems[index].querySelectorAll('.checkbox_table')
-        }
-        console.log(itemChecker)
-
-        let res = checkAllItems(itemChecker)
+    function checkItems(checker, items) {
+        let res = checkAllItems(items)
         if (res) {
-            itemChecker.forEach(item => item.checked = false)
-            checkAll.checked = false
+            items.forEach(item => item.checked = false)
+            checker.checked = false
         } 
         else {
-            itemChecker.forEach(item => item.checked = true)
-            checkAll.checked = true
+            items.forEach(item => item.checked = true)
+            checker.checked = true
         }
     }
 
-    checkAll.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            checkItems(index)
-        })
+    checkAllSettnigs.addEventListener('click', () => {
+        checkItems(checkAllSettnigs, settingsSettingsChecks)
     })
+
+    checkAllMailing.addEventListener('click', () => {
+        checkItems(checkAllMailing, settingMailingChecks)
+    })
+    
+    const addPurchaseChecker = () => {
+        const checkAllPurchase = document.querySelectorAll('.purchase .checkbox_header_purchase')
+        const purchaseItems = document.querySelectorAll('.purchase .purchase__item')
+
+        checkAllPurchase.forEach((item, index) => {
+            const checkboxes = purchaseItems[index].querySelectorAll('.checkbox_table')
+            item.addEventListener('click', () => {
+                checkItems(item, checkboxes)
+            })
+        })
+    }
+
+    /* delete favorities */
+
+    const addEventFavorites = () => {
+        const items = document.querySelectorAll('.SelectItemDiv3')
+        const hearts = document.querySelectorAll('.WishlistHeartSelected')
+        hearts.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                items[index].remove()
+            })
+        })
+    }
 
     /* menu */
 
@@ -109,18 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    /* delete favorities */
-
-    const addEventFavorites = () => {
-        const items = document.querySelectorAll('.SelectItemDiv3')
-        const hearts = document.querySelectorAll('.WishlistHeartSelected')
-        hearts.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                items[index].remove()
-            })
-        })
-    }
-
     /* purchase pagination */
     
     const purchaseShowButton = document.querySelector('.profile__block-header_purchase .profile__block-header-show')
@@ -151,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.purchase').html(html);
             }
         })
+        $('.profile__carousel_purchase').addHook('afterPaging', addPurchaseChecker)
+        addPurchaseChecker()
     }
 
     purchaseHideButton.style.display = "none"
