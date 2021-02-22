@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const purchaseShowButton = document.querySelector('.profile__block-header_purchase .profile__block-header-show')
     const purchaseHideButton = document.querySelector('.profile__block-header_purchase .profile__block-header-hide')
     const purchaseCarousel = document.querySelector('.profile__block-header_purchase .profile__carousel')
-    const purchaseItemsRaw = document.querySelector('.purchase_raw').childNodes
+    const purchaseItemsRaw = document.querySelector('.purchase_raw').children
 
     function layouting(data) {
         let dataHtml = ''
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
               })
         return dataHtml;
     }
-
+    
     const showPurchaseItems = (perPage) => {
         $('.profile__carousel_purchase').pagination({
             dataSource: Array.from(purchaseItemsRaw),
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* favorite pagination */
 
-    const favoriteItems = document.querySelector('.profile__favorites_raw').childNodes
+    const favoriteItems = document.querySelector('.profile__favorites_raw').children
 
     const showFavoriteItems = (perPage) => {
         $('.profile__carousel_favorites').pagination({
