@@ -224,6 +224,7 @@
 
 @media (max-width: 768px) {
     .profile {
+        padding: 2.5em;
         padding-left: 5vh;
         padding-right: 5vh;
         &__menu {
@@ -241,6 +242,7 @@
         }
         &__blocks {
             width: 100%;
+            margin-top: 0;
         }
         &-settings {
             width: 100%;

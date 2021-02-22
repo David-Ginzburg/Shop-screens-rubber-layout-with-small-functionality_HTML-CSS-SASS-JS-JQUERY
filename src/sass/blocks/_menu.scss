@@ -1,0 +1,26 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__item {
+        max-width: 25%;
+        text-decoration: none;
+        text-align: center;
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        &__item {
+            max-width: 50%;
+            margin-top: 1em;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+}

@@ -1130,6 +1130,35 @@ s {
   height: 1.5em;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  max-width: 25%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 1em;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu__item {
+    max-width: 50%;
+    margin-top: 1em;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
 .address {
   display: none;
 }
@@ -2844,6 +2873,7 @@ s {
 
 .information__header {
   padding: 50px;
+  padding-top: 0;
   text-align: center;
 }
 
@@ -3269,6 +3299,7 @@ s {
 
 @media (max-width: 768px) {
   .profile {
+    padding: 2.5em;
     padding-left: 5vh;
     padding-right: 5vh;
   }
@@ -3285,6 +3316,7 @@ s {
   }
   .profile__blocks {
     width: 100%;
+    margin-top: 0;
   }
   .profile-settings {
     width: 100%;
