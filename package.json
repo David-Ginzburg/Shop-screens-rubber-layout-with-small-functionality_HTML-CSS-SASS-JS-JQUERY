@@ -1,21 +1,21 @@
 {
   "name": "uber-course",
   "version": "1.0.0",
-  "description": "https://https://vadim-mostovenko.github.io/Uber-responsive-landing-page_HTML-CSS-JS/src/index.html",
+  "description": "https://github.com/Vadim-Mostovenko/Shop-screens-rubber-layout-with-small-functionality_HTML-CSS-SASS-JS-JQUERY/dist/index.html",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vadim-Mostovenko/Uber-responsive-landing-page_HTML-CSS-JS.git"
+    "url": "git+https://github.com/Vadim-Mostovenko/Shop-screens-rubber-layout-with-small-functionality_HTML-CSS-SASS-JS-JQUERY.git"
   },
   "author": "Vadim Mostovenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vadim-Mostovenko/Uber-responsive-landing-page_HTML-CSS-JS/issues"
+    "url": "https://github.com/Vadim-Mostovenko/Shop-screens-rubber-layout-with-small-functionality_HTML-CSS-SASS-JS-JQUERY/issues"
   },
-  "homepage": "https://github.com/Vadim-Mostovenko/Uber-responsive-landing-page_HTML-CSS-JS#readme",
+  "homepage": "https://github.com/Vadim-Mostovenko/Shop-screens-rubber-layout-with-small-functionality_HTML-CSS-SASS-JS-JQUERY#readme",
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
